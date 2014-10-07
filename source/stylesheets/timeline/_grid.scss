@@ -1,0 +1,21 @@
+// Body padding
+$body-padding: rhythm(1/2);
+
+body {
+  @extend .layout;
+  padding: 0 $body-padding;
+
+  @if not $debug {
+    background-color: white;
+  }
+  overflow-x: hidden; /* Hide horizontal scrollbar caused by 100vw elements */
+
+  .base-layout {
+    @extend .layout;
+    width: 90%;
+  }
+}
+.layout {
+  @include container(6/4 * $text-width);
+}
+

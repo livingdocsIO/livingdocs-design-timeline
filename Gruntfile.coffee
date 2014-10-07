@@ -29,6 +29,13 @@ grunt.initConfig
         ext: '.css'
       ]
 
+  compass:
+    dist:
+      options:
+        sassDir: 'source/stylesheets/'
+        cssDir: '.tmp/source/stylesheets/'
+        require: ['susy', 'breakpoint']
+
   stylus:
     compile:
       options:
@@ -39,6 +46,15 @@ grunt.initConfig
         src: [ 'source/stylesheets/*.styl' ]
         dest: '.tmp/'
         ext: '.css'
+      ]
+
+  jade:
+    compile:
+      files: [
+        expand: true
+        cwd: './'
+        src: [ 'source/**/*.jade' ]
+        ext: '.html'
       ]
 
   lddesigns:
@@ -139,7 +155,7 @@ grunt.initConfig
 
 grunt.registerTask "postCompile", [
   "recess"
-  "sass"
+  "compass"
   "stylus"
   "copy:assets"
   "copy:stylesheets"
@@ -149,6 +165,7 @@ grunt.registerTask "postCompile", [
 
 grunt.registerTask "default", [
   "clean:preBuild"
+  "jade"
   "lddesigns:development"
   "postCompile"
 ]
@@ -166,4 +183,3 @@ grunt.registerTask "serve", [
 ]
 
 grunt.registerTask "dev", ["serve"]
-

@@ -1,0 +1,85 @@
+// Set heading sizes
+// Maybe use a geometric scale
+$font-sizes-large-screen:  5 2.5 1.5 1.2 1;
+$font-sizes-medium-screen: 4 2   1.5 1.2 1;
+$font-sizes-small-screen:  3 1.5 1.2 1   1;
+
+@for $i from 1 through 5 {
+  $big: nth($font-sizes-large-screen, $i);
+  $medium: nth($font-sizes-medium-screen, $i);
+  $small: nth($font-sizes-small-screen, $i);
+
+  h#{$i} {
+    @include breakpoint($large-screen) {
+      @include adjust-font-size-to($big * $base-font-size);
+    }
+    @include breakpoint($medium-screen-only) {
+      @include adjust-font-size-to($medium * $base-font-size);
+    }
+    @include adjust-font-size-to($small * $base-font-size);
+    font-family: $font-sans-serif;
+  }
+}
+
+
+body {
+  font-family: $font-serif;
+  color: $font-color;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+a {
+  color: $upfront-color;
+  text-decoration: none;
+}
+
+p, h2, h3, h4, h5, ul {
+  @include breakpoint($large-screen) {
+    // Squish doc: http://susydocs.oddbird.net/en/latest/toolkit/#squish
+    @include squish(1);
+  }
+  @include rhythm(1);
+}
+
+h2.title {
+  @include breakpoint($large-screen) {
+    @include squish(1, 0);
+  }
+  clear: both;
+}
+
+.hypens {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+p {
+  @include adjust-font-size-to(0.9rem);
+  @include breakpoint($medium-screen) {
+    @include adjust-font-size-to(1rem);
+  }
+
+  &.drop-cap:not(.doc-snippet-highlight) {
+    &:first-letter {
+      font-size: rhythm(3.5); // depends on font height
+      line-height: rhythm(3);
+      float: left;
+      padding-right: 5px;
+      margin-top: -1px;
+      margin-bottom: -1px;
+    };
+  }
+
+  &.lead {
+    @include adjust-font-size-to(1.2rem, 1.1);
+    @include breakpoint($medium-screen) {
+      @include adjust-font-size-to(1.4rem, 1.2);
+    }
+    @include squish(0);
+  }
+
+}
