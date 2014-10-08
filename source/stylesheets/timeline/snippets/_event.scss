@@ -48,7 +48,7 @@
   $timeline-color: #ddd;
   $font-size-adjust-to: 0.9rem;
 
-  @include container();
+  @include container(hide);
   @include trailer();
   + .event {
     @include leader(-1);

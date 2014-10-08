@@ -34,6 +34,7 @@ grunt.initConfig
       options:
         sassDir: 'source/stylesheets/'
         cssDir: '.tmp/source/stylesheets/'
+        imagesDir: 'source/images/',
         require: ['susy', 'breakpoint']
 
   stylus:

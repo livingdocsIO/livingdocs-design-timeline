@@ -6,7 +6,7 @@ $debug: false;
   $debug-options: (
     debug: (
       image: show-columns,
-      color: rgba(230, 230, 240, 0.5),
+      color: rgba(#336, 0.1),
     ),
   );
 
@@ -14,6 +14,7 @@ $debug: false;
 
   // Let Compass display vertical lignes
   html {
-    @include debug-vertical-alignment();
+    // @include debug-vertical-alignment();
+    @include baseline-grid-background($base-line-height);
   }
 }
