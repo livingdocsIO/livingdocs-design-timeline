@@ -58,39 +58,28 @@ grunt.initConfig
         ext: '.html'
       ]
 
-  lddesigns:
+  lddesign:
+    options:
+      templatesDirectory: 'components'
+      configurationElement: 'script[type=ld-conf]'
     development:
-      options:
-        # templates do not work unminified. Is there a bug in livingdocs-engine?
-        minify: true
-        minifyOptions:
-          collapseWhitespace: true
-          removeComments: true
-          removeCommentsFromCDATA: true
-          removeCDATASectionsFromCDATA: true
-        templatesDirectory: 'components'
-        configurationElement: 'script[type=ld-conf]'
       files: [
         expand: true
-        cwd: './'
-        src: ['source']
+        cwd: './source'
+        src: ['./']
         dest: '.tmp/'
       ]
     build:
       options:
-        # templates do not work unminified. Is there a bug in livingdocs-engine?
-        minify: true
-        minifyOptions:
+        minify:
           collapseWhitespace: true
           removeComments: true
           removeCommentsFromCDATA: true
           removeCDATASectionsFromCDATA: true
-        templatesDirectory: 'components'
-        configurationElement: 'script[type=ld-conf]'
       files: [
         expand: true
-        cwd: './'
-        src: ['source']
+        cwd: './source'
+        src: ['./']
         dest: '.tmp/'
       ]
 
@@ -164,16 +153,10 @@ grunt.registerTask "postCompile", [
   "clean:postBuild"
 ]
 
-grunt.registerTask "default", [
-  "clean:preBuild"
-  "jade"
-  "lddesigns:development"
-  "postCompile"
-]
-
 grunt.registerTask "build", [
   "clean:preBuild"
-  "lddesigns:build"
+  "jade"
+  "lddesign:development"
   "postCompile"
 ]
 
