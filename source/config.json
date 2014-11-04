@@ -1,6 +1,140 @@
 {
-  "namespace": "timeline",
-  "paragraph": "p",
-  "version": 1,
-  "css": ["/stylesheets/all.css"]
+  "name": "timeline",
+  "version": "0.0.1",
+
+  "assets": {
+    "css": ["./stylesheets/all.css"]
+  },
+
+  "componentProperties": {
+    "fixed-background": {
+      "label": "Fixed Background",
+      "type": "option",
+      "value": "peephole"
+    },
+    "caption-inside": {
+      "label": "Inside Caption",
+      "type": "option",
+      "value": "inside-caption"
+    },
+    "caption-fade": {
+      "label": "Inside Caption",
+      "type": "option",
+      "value": "caption-inside-fade"
+    },
+    "small-size": {
+      "label": "Small size",
+      "type": "option",
+      "value": "small"
+    },
+    "position": {
+      "label": "Position",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Default"
+        },
+        {
+          "caption": "Left",
+          "value": "left"
+        },
+        {
+          "caption": "Right",
+          "value": "right"
+        },
+        {
+          "caption": "Middle",
+          "value": "middle"
+        }
+      ]
+    },
+    "aspect-ratio": {
+      "label": "Aspect Ratio",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Default"
+        },
+        {
+          "caption": "Cinemascope",
+          "value": "cinemascope"
+        },
+        {
+          "caption": "Square",
+          "value": "square"
+        }
+      ]
+    },
+    "options": {
+      "id": "Options",
+      "label": "Options",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Default"
+        },
+        {
+          "caption": "Stripe",
+          "value": "half-height"
+        }
+      ]
+    },
+    "featured": {
+      "label": "Featured",
+      "type": "option",
+      "value": "bleed"
+    },
+    "unordered": {
+      "label": "Unordered",
+      "type": "option",
+      "value": "bullet"
+    },
+    "dropcap": {
+      "label": "Drop Capital",
+      "type": "option",
+      "value": "drop-cap"
+    },
+    "large": {
+      "label": "Large",
+      "type": "option",
+      "value": "large"
+    },
+    "event-style": {
+      "label": "Style",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Default"
+        },
+        {
+          "caption": "Bullets",
+          "value": "bullets"
+        }
+      ]
+    }
+  },
+
+  "groups": [
+    {
+      "label": "Headers",
+      "components": ["head", "hero", "title"]
+    },
+    {
+      "label": "Text",
+      "components": ["p", "quote", "subtitle", "separator", "list-item", "aside"]
+    },
+    {
+      "label": "Images",
+      "components": ["full-size", "grid-of-6", "normal", "peephole"]
+    },
+    {
+      "label": "Timeline",
+      "components": ["event"]
+    }
+  ],
+
+  "defaultComponents": {
+    "paragraph": "p"
+  }
 }
+
