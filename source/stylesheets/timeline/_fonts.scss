@@ -63,7 +63,7 @@ p {
     @include adjust-font-size-to(1rem);
   }
 
-  &.drop-cap:not(.doc-snippet-highlight) {
+  &.drop-cap:not(.doc-component-highlight) {
     &:first-letter {
       font-size: rhythm(3.5); // depends on font height
       line-height: rhythm(3);
