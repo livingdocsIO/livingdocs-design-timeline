@@ -11,8 +11,8 @@ grunt.initConfig
         compile: true
       files: [
         expand: true
-        cwd: './'
-        src:['source/stylesheets/*']
+        cwd: './source'
+        src:['stylesheets/*']
         dest: '.tmp/'
         ext: '.css'
         filter: (src) ->
@@ -23,8 +23,8 @@ grunt.initConfig
     dist:
       files: [
         expand: true
-        cwd: './'
-        src:['source/stylesheets/*.scss']
+        cwd: './source'
+        src:['stylesheets/*.scss']
         dest: '.tmp/'
         ext: '.css'
       ]
@@ -33,7 +33,7 @@ grunt.initConfig
     dist:
       options:
         sassDir: 'source/stylesheets/'
-        cssDir: '.tmp/source/stylesheets/'
+        cssDir: '.tmp/stylesheets/'
         imagesDir: 'source/images/',
         require: ['susy', 'breakpoint']
 
@@ -43,8 +43,8 @@ grunt.initConfig
         compress: true
       files: [
         expand: true
-        cwd: './'
-        src: [ 'source/stylesheets/*.styl' ]
+        cwd: './source'
+        src: [ 'stylesheets/*.styl' ]
         dest: '.tmp/'
         ext: '.css'
       ]
@@ -87,10 +87,10 @@ grunt.initConfig
     assets:
       files: [
         expand: true
-        cwd: './'
+        cwd: './source'
         src:[
-          'source/images/**'
-          'source/index.html'
+          'images/**'
+          'index.html'
         ]
         dest: '.tmp/'
         # exclude empty directories
@@ -100,7 +100,7 @@ grunt.initConfig
     tmpToDist:
       files: [
         expand: true
-        cwd: '.tmp/source/'
+        cwd: '.tmp/'
         src: ['**/*']
         dest: 'dist/'
       ]
@@ -114,8 +114,8 @@ grunt.initConfig
     stylesheets:
       files: [
         expand: true
-        cwd: './'
-        src:['source/stylesheets/**/*.css']
+        cwd: './source'
+        src:['stylesheets/**/*.css']
         dest: '.tmp/'
       ]
 
@@ -161,9 +161,10 @@ grunt.registerTask "build", [
 ]
 
 grunt.registerTask "serve", [
-  "default"
+  "build"
   "express"
   "watch"
 ]
 
 grunt.registerTask "dev", ["serve"]
+grunt.registerTask "default", ["build"]

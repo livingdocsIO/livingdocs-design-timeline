@@ -1,5 +1,5 @@
 {
-  "name": "livingdocs-design",
+  "name": "livingdocs-design-timeline",
   "version": "0.0.1",
   "scripts": {
     "start": "grunt server"
