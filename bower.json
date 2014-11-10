@@ -1,0 +1,9 @@
+{
+  "name": "livingdocs-design-timeline",
+  "version": "0.0.1",
+  "dependencies": {
+    "livingdocs-engine": "git@github.com:upfrontIO/livingdocs-engine.git#master",
+    "editable": "git@github.com:upfrontIO/editable.js.git#~0.4.1",
+    "jquery": "~2.1.1"
+  }
+}
