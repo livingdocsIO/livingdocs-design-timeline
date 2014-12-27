@@ -1,0 +1,14 @@
+div.embed {
+  color: #0fb4f4;
+  border: 1px dashed #999;
+  box-sizing: border-box;
+}
+
+
+div.embed.tweet .placeholder {
+  min-height: 200px;
+  background-image: url(/assets/images/tweet-embed.svg);
+  background-position: 50% 30%;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}

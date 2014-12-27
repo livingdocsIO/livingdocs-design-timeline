@@ -130,6 +130,10 @@
     {
       "label": "Timeline",
       "components": ["event"]
+    },
+    {
+      "label": "Embeds",
+      "components": ["tweet"]
     }
   ],
 
