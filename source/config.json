@@ -121,11 +121,11 @@
     },
     {
       "label": "Text",
-      "components": ["p", "quote", "subtitle", "separator", "list-item", "aside"]
+      "components": ["p", "quote", "subtitle", "separator", "listItem", "aside"]
     },
     {
       "label": "Images",
-      "components": ["full-size", "grid-of-6", "normal", "peephole"]
+      "components": ["fullSize", "gridOf6", "normal", "peephole"]
     },
     {
       "label": "Timeline",
