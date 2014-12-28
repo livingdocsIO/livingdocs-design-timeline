@@ -125,7 +125,7 @@ grunt.initConfig
       tasks: ['default']
       options:
         nospawn: true
-        livereload: 35769
+        livereload: 35770
 
   clean:
     preBuild: ['.tmp/', 'dist/']
