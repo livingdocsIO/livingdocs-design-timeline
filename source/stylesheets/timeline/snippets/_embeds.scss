@@ -4,7 +4,6 @@ div.embed {
   box-sizing: border-box;
 }
 
-
 div.embed.tweet .placeholder {
   min-height: 200px;
   background-image: url(/assets/images/tweet-embed.svg);
@@ -13,7 +12,16 @@ div.embed.tweet .placeholder {
   background-repeat: no-repeat;
 }
 
+div.embed.iframe .placeholder {
+  min-height: 200px;
+  background-image: url(/assets/images/iframe-embed.svg);
+  background-position: 50% 30%;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+
 .embed-container {
+  margin: 10px 0 10px 0;
   &.right {
     @include breakpoint($medium-screen) {
       @include span(3 at 4);
