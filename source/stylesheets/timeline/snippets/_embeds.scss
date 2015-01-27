@@ -1,0 +1,42 @@
+div.embed {
+  color: $light-black-color;
+  border: 1px dashed $light-black-color;
+  box-sizing: border-box;
+}
+
+
+div.embed.tweet .placeholder {
+  min-height: 200px;
+  background-image: url(/assets/images/tweet-embed.svg);
+  background-position: 50% 50%;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+
+.embed-container {
+  @include rhythm(1);
+
+  &.right {
+    @include breakpoint($medium-screen) {
+      @include span(3 at 4);
+      margin-left: gutter();
+    }
+    clear: right;
+  }
+
+  &.left {
+    @include breakpoint($medium-screen) {
+      @include span(3);
+    }
+    @include breakpoint($large-screen) {
+      @include span(2);
+    }
+    clear: left;
+  }
+
+  &.middle {
+    @include breakpoint($large-screen) {
+      @include squish(1);
+    }
+  }
+}

@@ -7,6 +7,8 @@
     "css": ["./stylesheets/timeline.css"]
   },
 
+  "wrapper": "<div class='funky-wrapper doc-section'></div>",
+
   "componentProperties": {
     "fixed-background": {
       "label": "Fixed Background",
@@ -122,21 +124,50 @@
     },
     {
       "label": "Text",
-      "components": ["p", "quote", "subtitle", "separator", "list-item", "aside"]
+      "components": ["p", "quote", "subtitle", "separator", "listItem", "aside"]
     },
     {
       "label": "Images",
-      "components": ["full-size", "grid-of-6", "normal", "peephole"]
+      "components": ["fullSize", "gridOf6", "normal", "peephole"]
     },
     {
       "label": "Timeline",
       "components": ["event"]
+    },
+    {
+      "label": "Embeds",
+      "components": ["tweet"]
     }
   ],
 
   "defaultComponents": {
     "paragraph": "p",
     "image": "normal"
-  }
-}
+  },
 
+  "defaultContent": [
+    { "identifier": "timeline.head" },
+    { "identifier": "timeline.normal",
+      "styles": {
+        "position": "left",
+        "aspect-ratio": "square"
+      }
+    },
+    { "identifier": "timeline.p" }
+  ],
+
+  "prefilledComponents": {},
+
+  "metadata": [
+    {
+      "identifier": "title",
+      "type": "text",
+      "matches": ["hero.title", "title.title", "head.title"]
+    },
+    {
+      "identifier": "description",
+      "type": "text",
+      "matches": ["p.text"]
+    }
+  ]
+}
