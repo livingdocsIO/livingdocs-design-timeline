@@ -51,23 +51,6 @@
         }
       ]
     },
-    "aspect-ratio": {
-      "label": "Aspect Ratio",
-      "type": "select",
-      "options": [
-        {
-          "caption": "Default"
-        },
-        {
-          "caption": "Cinemascope",
-          "value": "cinemascope"
-        },
-        {
-          "caption": "Square",
-          "value": "square"
-        }
-      ]
-    },
     "options": {
       "id": "Options",
       "label": "Options",

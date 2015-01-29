@@ -16,18 +16,6 @@ figure {
     width: 100%;
   }
 
-  &.cinemascope {
-    .figure-container {
-      padding-bottom: 3/8 * 100%;
-    }
-  }
-
-  &.square {
-    .figure-container {
-      padding-bottom: 100%;
-    }
-  }
-
   // Use full width images on small screens
   @include breakpoint($small-screens) {
     margin-left: - $body-padding;
