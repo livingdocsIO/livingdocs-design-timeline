@@ -136,7 +136,7 @@
     },
     {
       "label": "Embeds",
-      "components": ["tweet"]
+      "components": ["tweet", "iframe"]
     }
   ],
 
