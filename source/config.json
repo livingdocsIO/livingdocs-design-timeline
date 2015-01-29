@@ -115,7 +115,7 @@
     },
     {
       "label": "Embeds",
-      "components": ["tweet", "iframe"]
+      "components": ["tweet", "iframe", "free-html"]
     }
   ],
 
