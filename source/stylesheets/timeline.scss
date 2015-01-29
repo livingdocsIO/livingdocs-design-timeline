@@ -1,6 +1,8 @@
-@import "timeline/settings";
-@import "shared/all";
+@import 'timeline/settings';
+@import 'shared/all';
 
-@import "timeline/grid";
-@import "timeline/fonts";
-@import "timeline/snippets/all";
+@import 'timeline/grid';
+@import 'timeline/fonts';
+@import 'timeline/components/all';
+
+@import 'editor/embeds';
