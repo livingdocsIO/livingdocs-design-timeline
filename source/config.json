@@ -1,7 +1,7 @@
 {
   "name": "timeline",
   "label": "Timeline",
-  "version": "0.0.1",
+  "version": "0.0.2",
 
   "assets": {
     "css": ["./stylesheets/timeline.css"]
@@ -124,11 +124,11 @@
     },
     {
       "label": "Text",
-      "components": ["p", "quote", "subtitle", "separator", "listItem", "aside"]
+      "components": ["p", "quote", "subtitle", "separator", "list-item", "aside"]
     },
     {
       "label": "Images",
-      "components": ["fullSize", "gridOf6", "normal", "peephole"]
+      "components": ["full-size", "grid-of-6", "normal", "peephole"]
     },
     {
       "label": "Timeline",
@@ -136,7 +136,7 @@
     },
     {
       "label": "Embeds",
-      "components": ["tweet"]
+      "components": ["tweet", "iframe"]
     }
   ],
 
