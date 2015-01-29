@@ -24,6 +24,10 @@ figure {
 
   @include trailer(1);
 
+  @include breakpoint($large-screen) {
+    @include squish(1);
+  }
+
   &.right {
     @include breakpoint($medium-screen) {
       @include span(3 at 4);
@@ -40,12 +44,6 @@ figure {
       @include span(2);
     }
     clear: left;
-  }
-
-  &.middle {
-    @include breakpoint($large-screen) {
-      @include squish(1);
-    }
   }
 
   @at-root .background {

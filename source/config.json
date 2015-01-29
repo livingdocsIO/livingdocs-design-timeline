@@ -35,7 +35,7 @@
       "type": "select",
       "options": [
         {
-          "caption": "Default"
+          "caption": "Middle"
         },
         {
           "caption": "Left",
@@ -44,10 +44,6 @@
         {
           "caption": "Right",
           "value": "right"
-        },
-        {
-          "caption": "Middle",
-          "value": "middle"
         }
       ]
     },
