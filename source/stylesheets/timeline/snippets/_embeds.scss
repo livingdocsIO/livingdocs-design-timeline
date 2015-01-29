@@ -7,7 +7,7 @@ div.embed {
 div.embed.tweet .placeholder {
   min-height: 200px;
   background-image: url(/assets/images/tweet-embed.svg);
-  background-position: 50% 30%;
+  background-position: 50% 50%;
   background-size: 100px 100px;
   background-repeat: no-repeat;
 }
@@ -21,7 +21,7 @@ div.embed.iframe .placeholder {
 }
 
 .embed-container {
-  margin: 10px 0 10px 0;
+  @include rhythm(1);
   &.right {
     @include breakpoint($medium-screen) {
       @include span(3 at 4);

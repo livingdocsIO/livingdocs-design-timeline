@@ -1,10 +1,13 @@
 {
   "name": "timeline",
-  "version": "0.0.1",
+  "label": "Timeline",
+  "version": "0.0.2",
 
   "assets": {
     "css": ["./stylesheets/timeline.css"]
   },
+
+  "wrapper": "<div class='funky-wrapper doc-section'></div>",
 
   "componentProperties": {
     "fixed-background": {
@@ -121,11 +124,11 @@
     },
     {
       "label": "Text",
-      "components": ["p", "quote", "subtitle", "separator", "listItem", "aside"]
+      "components": ["p", "quote", "subtitle", "separator", "list-item", "aside"]
     },
     {
       "label": "Images",
-      "components": ["fullSize", "gridOf6", "normal", "peephole"]
+      "components": ["full-size", "grid-of-6", "normal", "peephole"]
     },
     {
       "label": "Timeline",
@@ -138,7 +141,33 @@
   ],
 
   "defaultComponents": {
-    "paragraph": "p"
-  }
-}
+    "paragraph": "p",
+    "image": "normal"
+  },
 
+  "defaultContent": [
+    { "identifier": "timeline.head" },
+    { "identifier": "timeline.normal",
+      "styles": {
+        "position": "left",
+        "aspect-ratio": "square"
+      }
+    },
+    { "identifier": "timeline.p" }
+  ],
+
+  "prefilledComponents": {},
+
+  "metadata": [
+    {
+      "identifier": "title",
+      "type": "text",
+      "matches": ["hero.title", "title.title", "head.title"]
+    },
+    {
+      "identifier": "description",
+      "type": "text",
+      "matches": ["p.text"]
+    }
+  ]
+}
