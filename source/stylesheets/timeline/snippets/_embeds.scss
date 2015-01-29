@@ -22,6 +22,8 @@ div.embed.iframe .placeholder {
 
 .embed-container {
   @include rhythm(1);
+  clear: both;
+
   &.right {
     @include breakpoint($medium-screen) {
       @include span(3 at 4);
