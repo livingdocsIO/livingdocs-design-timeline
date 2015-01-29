@@ -1,11 +1,17 @@
 <script type="ld-conf">
 {
-  "label": "Normal",
-  "properties": ["position", "aspect-ratio", "caption-fade"]
+  "label": "Inline",
+  "properties": ["position", "caption-fade"],
+  "directives": {
+    "image": {
+      "imageRatios": ["16:9", "1:1", "4:3", "3:4"],
+      "allowOriginalRatio": true
+    }
+  }
 }
 </script>
 
 <figure class="aspect-ratio">
-  <div class="figure-container" doc-image="image"></div>
+  <img doc-image="image"/>
   <figcaption doc-editable="caption" doc-optional="true">Add image caption</figcaption>
 </figure>
