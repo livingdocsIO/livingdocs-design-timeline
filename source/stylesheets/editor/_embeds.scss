@@ -1,0 +1,22 @@
+.embed {
+
+  &.tweet .placeholder {
+    min-height: 200px;
+
+    background-image: url('/assets/images/tweet-embed.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+  }
+
+  &.free-html .placeholder {
+    min-height: 200px;
+
+    background-image: url('/assets/images/tweet-embed.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+  }
+
+}
+
