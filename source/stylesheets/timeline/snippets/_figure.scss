@@ -12,6 +12,10 @@ figure {
     @include debug-image;
   }
 
+  img {
+    width: 100%;
+  }
+
   &.cinemascope {
     .figure-container {
       padding-bottom: 3/8 * 100%;
