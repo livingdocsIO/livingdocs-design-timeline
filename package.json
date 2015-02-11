@@ -1,6 +1,6 @@
 {
   "name": "livingdocs-design-timeline",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "scripts": {
     "start": "grunt server"
   },
