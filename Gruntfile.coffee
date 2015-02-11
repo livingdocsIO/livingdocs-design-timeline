@@ -183,8 +183,10 @@ grunt.registerTask "serve", [
 # release:major
 grunt.registerTask 'release', (type) ->
   type ?= 'patch'
+  grunt.task.run('bump-only:' + type)
   grunt.task.run('build')
-  grunt.task.run('bump:' + type)
+  grunt.task.run('bump-commit')
+
 
 
 grunt.registerTask "dev", ["serve"]
