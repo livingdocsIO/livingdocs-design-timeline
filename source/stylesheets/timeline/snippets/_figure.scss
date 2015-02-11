@@ -12,16 +12,8 @@ figure {
     @include debug-image;
   }
 
-  &.cinemascope {
-    .figure-container {
-      padding-bottom: 3/8 * 100%;
-    }
-  }
-
-  &.square {
-    .figure-container {
-      padding-bottom: 100%;
-    }
+  img {
+    width: 100%;
   }
 
   // Use full width images on small screens
@@ -31,6 +23,10 @@ figure {
   }
 
   @include trailer(1);
+
+  @include breakpoint($large-screen) {
+    @include squish(1);
+  }
 
   &.right {
     @include breakpoint($medium-screen) {
@@ -48,12 +44,6 @@ figure {
       @include span(2);
     }
     clear: left;
-  }
-
-  &.middle {
-    @include breakpoint($large-screen) {
-      @include squish(1);
-    }
   }
 
   @at-root .background {

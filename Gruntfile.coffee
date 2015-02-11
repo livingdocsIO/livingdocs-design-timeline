@@ -131,6 +131,13 @@ grunt.initConfig
     preBuild: ['.tmp/', 'dist/']
     postBuild: ['.tmp/']
 
+  bump:
+    options:
+      files: ['package.json', 'bower.json', 'source/config.json']
+      commitFiles: ['-a'], # '-a' for all files
+      pushTo: 'origin'
+      push: true
+
   express:
     dev:
       options:
@@ -165,6 +172,20 @@ grunt.registerTask "serve", [
   "express"
   "watch"
 ]
+
+
+# Release a new version
+# Only do this on the `master` branch.
+#
+# options:
+# release:patch
+# release:minor
+# release:major
+grunt.registerTask 'release', (type) ->
+  type ?= 'patch'
+  grunt.task.run('build')
+  grunt.task.run('bump:' + type)
+
 
 grunt.registerTask "dev", ["serve"]
 grunt.registerTask "default", ["build"]
