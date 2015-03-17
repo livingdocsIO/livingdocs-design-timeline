@@ -1,0 +1,29 @@
+<script type="ld-conf">
+{
+  "name": "retlated-page",
+  "label": "Related Page",
+  "directives": {
+    "external": {
+      "prefill": {
+        "page-title": {
+          "key": "meta.title",
+          "provider": "iframely"
+        },
+        "page-image": {
+          "key": "links.thumbnail.href",
+          "provider": "iframely"
+        }
+      }
+    }
+  }
+}
+</script>
+<div>
+  <a doc-link="page-link">
+    <div>
+      <h2 doc-editable="page-title"></h2>
+      <img doc-image="page-image" />
+    </div>
+  </a>
+  <p doc-editable="page-description"></p>
+</div>
