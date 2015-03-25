@@ -99,7 +99,7 @@
   "groups": [
     {
       "label": "Links",
-      "components": ["related-page"]
+      "components": ["related-page", "image-link"]
     },
     {
       "label": "Headers",
