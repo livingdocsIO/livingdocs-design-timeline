@@ -1,0 +1,30 @@
+<script type="ld-conf">
+{
+  "label": "Related Page",
+  "directives": {
+    "page-link": {
+      "prefill": {
+        "page-title": {
+          "key": "title",
+          "provider": "iframely"
+        },
+        "page-image": {
+          "key": "thumbnail",
+          "provider": "iframely"
+        }
+      }
+    }
+  }
+}
+</script>
+<div>
+  <a doc-link="page-link">
+    <div>
+      <h2 doc-editable="page-title">
+        Set link to pre-fill the title
+      </h2>
+      <img doc-image="page-image" />
+    </div>
+  </a>
+  <p doc-editable="page-description"></p>
+</div>

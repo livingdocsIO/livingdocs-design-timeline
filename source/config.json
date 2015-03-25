@@ -98,6 +98,10 @@
 
   "groups": [
     {
+      "label": "Links",
+      "components": ["related-page", "image-link"]
+    },
+    {
       "label": "Headers",
       "components": ["head", "hero", "title"]
     },
