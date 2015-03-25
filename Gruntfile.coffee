@@ -63,6 +63,8 @@ grunt.initConfig
       templatesDirectory: 'components'
       configurationElement: 'script[type=ld-conf]'
     development:
+      options:
+        minify: false
       files: [
         expand: true
         cwd: './source'
