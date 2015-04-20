@@ -1,5 +1,57 @@
 .teaser {
   position: relative;
+
+  @include trailer(1);
+  clear: both;
+
+  @include breakpoint($large-screen) {
+    @include squish(1);
+  }
+
+  // &.right {
+  //   @include breakpoint($medium-screen) {
+  //     @include span(2 at 4);
+  //     margin-right: gutter();
+  //     margin-left: 0;
+  //   }
+  //   clear: right;
+  // }
+
+  &.right {
+    float: right;
+    width: span(2);
+    margin-left: 0;
+    margin-right: span(1) + gutter();
+    clear: right;
+
+    .teaser__text {
+      h3 {
+        font-size: 0.6em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+    }
+  }
+
+  &.left {
+    clear: left;
+    @include breakpoint($medium-screen) {
+      @include span(3);
+    }
+    @include breakpoint($large-screen) {
+      @include span(2);
+    }
+
+    .teaser__text {
+      h3 {
+        font-size: 0.6em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+    }
+  }
 }
 
 .teaser__image {
