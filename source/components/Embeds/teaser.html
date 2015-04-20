@@ -1,0 +1,46 @@
+<script type="ld-conf">
+  {
+    "label": "Teaser",
+    "directives": {
+      "link": {
+        "prefill": {
+          "title": {
+            "key": "title",
+            "provider": "iframely"
+          },
+          "site": {
+            "key": "site",
+            "provider": "iframely"
+          },
+          "author": {
+            "key": "author",
+            "provider": "iframely"
+          },
+          "image": {
+            "key": "image",
+            "provider": "iframely"
+          }
+        }
+      },
+      "image": {
+        "imageRatios": ["16:9"],
+        "allowOriginalRatio": false
+      }
+    }
+  }
+</script>
+
+<div class="teaser">
+  <a doc-link="link">
+    <figure class="aspect-ration">
+      <div class="container image-container teaser__image" doc-image="image">
+        <div class="teaser__text">
+          <div>
+            <h3><span doc-editable="author" doc-optional></span>, <span doc-editable="site" doc-optional></span></h3>
+          </div>
+          <h2 doc-editable="title"></h2>
+        </div>
+      </div>
+    </figure>
+  </a>
+</div>
