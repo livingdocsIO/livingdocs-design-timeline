@@ -30,8 +30,7 @@
       $(document).ready(function() {
 
           // Load the design
-          design.timeline.assets.basePath = '/';
-          doc.design.load(design.timeline);
+          doc.design.load(design.timeline, { basePath: '/' });
 
           // Create the document
           var article = doc.new({
@@ -67,16 +66,19 @@
                 }
               ],
               design: {
-                name: 'timeline'
+                name: 'timeline',
+                version: '0.3.1'
               }
             }
           });
 
 
           // Insert the article into the page
-          article.appendTo('.article', {
+          article.createView({
+            host: '.article',
             interactive: true,
-            loadResources: false
+            loadResources: false,
+            iframe: false
           });
         });
 
