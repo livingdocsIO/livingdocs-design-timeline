@@ -1,3 +1,26 @@
+// for floating teasers on desktops and tablets
+@mixin teaser__text--small {
+  h3 {
+    font-size: 0.6em;
+    line-height: 1.5em;
+  }
+  h2 {
+    font-size: 1em;
+    line-height: 1.2em;
+  }
+}
+
+@mixin teaser__text--large {
+  h3 {
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+}
+
 .teaser {
   position: relative;
 
@@ -8,67 +31,68 @@
     @include squish(1);
   }
 
-  // &.right {
-  //   @include breakpoint($medium-screen) {
-  //     @include span(2 at 4);
-  //     margin-right: gutter();
-  //     margin-left: 0;
-  //   }
-  //   clear: right;
-  // }
-
-  &.right {
-    float: right;
-    width: span(2);
-    margin-left: gutter();
-    clear: right;
-
+  // text size of floating teasers is large on mobile and
+  // small otherwise
+  &.left, &.right {
     .teaser__text {
-      h3 {
-        font-size: 0.6em;
-      }
-      h2 {
-        font-size: 1em;
+      @include teaser__text--large();
+    }
+    @include breakpoint($medium-screen) {
+      .teaser__text {
+        @include teaser__text--small();
       }
     }
   }
 
-  &.right + &.left {
-    margin-right: 0;
-  }
-
-  &.left + &.right {
+  // floating teasers
+  &.right {
+    clear: right;
+    width: 100%;
     margin-left: 0;
-    margin-right: span(1) + gutter();
-  }
+    margin-right: 0;
 
+    @include breakpoint($medium-screen) {
+      float: right;
+      width: span(3);
+    }
+    @include breakpoint($large-screen) {
+      width: span(2);
+      margin-right: span(1) + gutter();
+    }
+  }
   &.left {
     clear: left;
+    width: 100%;
     @include breakpoint($medium-screen) {
       @include span(3);
     }
     @include breakpoint($large-screen) {
       @include span(2);
     }
+  }
 
-    .teaser__text {
-      h3 {
-        font-size: 0.6em;
-      }
-      h2 {
-        font-size: 1em;
-      }
+  // floating teasers next to each other
+  &.right + &.left {
+    margin-right: 0;
+  }
+
+  &.left + &.right {
+    margin-left: 0;
+    margin-right: 0;
+    @include breakpoint($large-screen) {
+      margin-right: span(1) + gutter();
     }
   }
+
 }
 
+// image component of the teaser
 .teaser__image {
   background-size: cover;
   background-position: center center;
   @include ratio-height(56%); // 16/9
   position: relative;
 }
-
 .image--overlay {
   position: absolute;
   height: 50%;
@@ -83,6 +107,7 @@
     );
 }
 
+// text component of the teaser
 .teaser__text {
   color: #fff;
   position: absolute;
@@ -93,16 +118,16 @@
     background-color: black;
     padding: 0.3rem;
     display: inline;
-    font-size: 0.8em;
-    line-height: 1.5em;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
   }
   h2 {
     margin-top: 5px;
     margin-bottom: 0px;
-    font-size: 1.2em;
-    line-height: 1.2em;
     text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+  }
+  @include teaser__text--large();
+  .source {
+    color: $livingdocs-color;
   }
 }
