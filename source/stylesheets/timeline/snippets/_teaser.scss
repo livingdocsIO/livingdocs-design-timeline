@@ -135,10 +135,20 @@
 .teaser {
   &.hide-image {
     padding-top: 20px;
-    margin-left: gutter();
+    margin-left: 0;
     .teaser__image {
       display: none;
     }
+    &.left, &.right {
+      margin-left: 0;
+    }
+    @include breakpoint($large-screen) {
+      margin-left: gutter();
+      &.left {
+        margin-left: span(1) + gutter();
+      }
+    }
+
     .teaser__text {
       position: relative;
       left: 0;
