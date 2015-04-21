@@ -33,6 +33,11 @@
 
   @include breakpoint($large-screen) {
     @include squish(1);
+    // reset stupid responsive styles
+    // https://github.com/upfrontIO/livingdocs-design-timeline/issues/7
+    h1, h2, h3, h4 {
+      margin-left: 0;
+    }
   }
 
   // text size of floating teasers is large on mobile and
@@ -147,7 +152,9 @@
       margin-left: 0;
     }
     @include breakpoint($large-screen) {
-      margin-left: gutter();
+      // very ugly hack... I get overwritten from above. Still,
+      // needs to be fixed at some point.
+      margin-left: span(1) + gutter();
       &.left {
         margin-left: span(1) + gutter();
       }
