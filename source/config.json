@@ -47,6 +47,11 @@
         }
       ]
     },
+    "hide-image": {
+      "label": "Text only",
+      "type": "option",
+      "value": "hide-image"
+    },
     "options": {
       "id": "Options",
       "label": "Options",
