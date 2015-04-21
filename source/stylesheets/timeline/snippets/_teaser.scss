@@ -20,8 +20,7 @@
   &.right {
     float: right;
     width: span(2);
-    margin-left: 0;
-    margin-right: span(1) + gutter();
+    margin-left: gutter();
     clear: right;
 
     .teaser__text {
@@ -32,6 +31,15 @@
         font-size: 1em;
       }
     }
+  }
+
+  &.right + &.left {
+    margin-right: 0;
+  }
+
+  &.left + &.right {
+    margin-left: 0;
+    margin-right: span(1) + gutter();
   }
 
   &.left {
