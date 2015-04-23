@@ -104,6 +104,10 @@
 
   "groups": [
     {
+      "label": "Collection",
+      "components": ["teaser"]
+    },
+    {
       "label": "Headers",
       "components": ["head", "hero", "title"]
     },
@@ -116,12 +120,12 @@
       "components": ["full-size", "grid-of-6", "normal", "peephole"]
     },
     {
-      "label": "Timeline",
-      "components": ["event"]
+      "label": "Embeds",
+      "components": ["tweet", "iframe"]
     },
     {
-      "label": "Embeds",
-      "components": ["tweet", "iframe", "teaser"]
+      "label": "Timeline",
+      "components": ["event"]
     }
   ],
 
