@@ -30,8 +30,7 @@
       $(document).ready(function() {
 
           // Load the design
-          design.timeline.assets.basePath = '/';
-          doc.design.load(design.timeline);
+          doc.design.load(design.timeline, { basePath: '/' });
 
           // Create the document
           var article = doc.new({
@@ -54,7 +53,88 @@
                 }, {
                   "component": "normal"
                 }, {
+                  "component": "normal",
+                  "styles": {
+                    "position": "left"
+                  }
+                }, {
+                  "component": "normal",
+                  "styles": {
+                    "position": "right"
+                  }
+                }, {
                   "component": "p"
+                },{
+                  "component": "teaser",
+                  "content": {
+                    "title": "Jeb Bush endorses 'death panels' — and he's right to do so",
+                    "link": "http://www.vox.com/2015/4/17/8446647/jeb-bush-endorses-death-panels-and-hes-right-to-do-so",
+                    "headline": "Ezra Klein",
+                    "site": "Vox",
+                    "image": "assets/images/mountains.jpg"
+                  }
+                },{
+                  "component": "teaser",
+                  "content": {
+                    "title": "Jeb Bush endorses 'death panels' — and he's right to do so",
+                    "link": "http://www.vox.com/2015/4/17/8446647/jeb-bush-endorses-death-panels-and-hes-right-to-do-so",
+                    "headline": "Ezra Klein",
+                    "site": "Vox",
+                    "image": "assets/images/mountains.jpg"
+                  },
+                  "styles": {
+                    "position": "left",
+                    "hide-image": "hide-image"
+                  }
+                },{
+                  "component": "teaser",
+                  "content": {
+                    "title": "A smarter way to look at fitness.",
+                    "link": "http://www.apple.com/watch/",
+                    "headline": "Steve Jobs",
+                    "site": "Apple",
+                    "image": "assets/images/applewatch.png"
+                  },
+                  "styles": {
+                    "position": "right",
+                    "hide-image": "hide-image"
+                  }
+                },{
+                  "component": "teaser",
+                  "content": {
+                    "title": "Jeb Bush endorses 'death panels' — and he's right to do so",
+                    "link": "http://www.vox.com/2015/4/17/8446647/jeb-bush-endorses-death-panels-and-hes-right-to-do-so",
+                    "headline": "Ezra Klein",
+                    "site": "Vox",
+                    "image": "assets/images/mountains.jpg"
+                  },
+                  "styles": {
+                    "position": "left"
+                  }
+                },{
+                  "component": "teaser",
+                  "content": {
+                    "title": "A smarter way to look at fitness.",
+                    "link": "http://www.apple.com/watch/",
+                    "headline": "Steve Jobs",
+                    "site": "Apple",
+                    "image": "assets/images/applewatch.png"
+                  },
+                  "styles": {
+                    "position": "right"
+                  }
+                },{
+                  "component": "teaser",
+                  "content": {
+                    "title": "Jeb Bush endorses 'death panels' — and he's right to do so",
+                    "link": "http://www.vox.com/2015/4/17/8446647/jeb-bush-endorses-death-panels-and-hes-right-to-do-so",
+                    "headline": "Ezra Klein",
+                    "site": "Vox",
+                    "image": "assets/images/mountains.jpg"
+                  },
+                  "styles": {
+                    "hide-image": "hide-image"
+                  }
                 },
                 {
                   "component": "tweet"
@@ -64,19 +144,25 @@
                 },
                 {
                   "component": "free-html"
+                },
+                {
+                  "component": "tweet"
                 }
               ],
               design: {
-                name: 'timeline'
+                name: 'timeline',
+                version: '0.4.0'
               }
             }
           });
 
 
           // Insert the article into the page
-          article.appendTo('.article', {
+          article.createView({
+            host: '.article',
             interactive: true,
-            loadResources: false
+            loadResources: false,
+            iframe: false
           });
         });
 
