@@ -159,7 +159,14 @@
     { "identifier": "timeline.p" }
   ],
 
-  "prefilledComponents": {},
+  "prefilledComponents": {
+    "hero": {
+      "text": {
+        "value": "author",
+        "type": "computed"
+      }
+    }
+  },
 
   "metadata": [
     {
@@ -171,6 +178,17 @@
       "identifier": "description",
       "type": "text",
       "matches": ["p.text"]
+    },
+    {
+      "identifier": "author",
+      "type": "text",
+      "matches": ["hero.text"]
+    },
+    {
+      "identifier": "teaserImage",
+      "type": "image",
+      "matches": ["hero.image", "normal.image", "full-size.image", "peephole.image"],
+      "isEditable": false
     }
   ]
 }
