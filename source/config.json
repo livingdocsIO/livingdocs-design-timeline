@@ -178,7 +178,7 @@
     {
       "identifier": "description",
       "type": "text",
-      "matches": ["p.text"]
+      "matches": ["head.text", "p.text"]
     },
     {
       "identifier": "author",
