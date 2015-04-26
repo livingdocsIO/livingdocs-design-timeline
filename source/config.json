@@ -1,7 +1,8 @@
 {
   "name": "timeline",
   "label": "Timeline",
-  "version": "0.3.1",
+  "version": "0.4.0",
+  "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
 
   "assets": {
     "css": ["./stylesheets/timeline.css"]
@@ -46,6 +47,11 @@
           "value": "right"
         }
       ]
+    },
+    "hide-image": {
+      "label": "Text only",
+      "type": "option",
+      "value": "hide-image"
     },
     "options": {
       "id": "Options",
@@ -98,6 +104,10 @@
 
   "groups": [
     {
+      "label": "Collection",
+      "components": ["teaser"]
+    },
+    {
       "label": "Headers",
       "components": ["head", "hero", "title"]
     },
@@ -110,12 +120,12 @@
       "components": ["full-size", "grid-of-6", "normal", "peephole"]
     },
     {
-      "label": "Timeline",
-      "components": ["event"]
-    },
-    {
       "label": "Embeds",
       "components": ["tweet", "iframe"]
+    },
+    {
+      "label": "Timeline",
+      "components": ["event"]
     }
   ],
 
@@ -154,7 +164,14 @@
     { "identifier": "timeline.p" }
   ],
 
-  "prefilledComponents": {},
+  "prefilledComponents": {
+    "hero": {
+      "text": {
+        "value": "author",
+        "type": "computed"
+      }
+    }
+  },
 
   "metadata": [
     {
@@ -165,7 +182,18 @@
     {
       "identifier": "description",
       "type": "text",
-      "matches": ["p.text"]
+      "matches": ["head.text", "p.text"]
+    },
+    {
+      "identifier": "author",
+      "type": "text",
+      "matches": ["hero.text"]
+    },
+    {
+      "identifier": "teaserImage",
+      "type": "image",
+      "matches": ["hero.image", "normal.image", "full-size.image", "peephole.image"],
+      "isEditable": false
     }
   ]
 }

@@ -14,3 +14,8 @@
     @include debug-image;
   }
 }
+
+@mixin ratio-height($ratio) {
+  height: 0;
+  padding-bottom: $ratio;
+}
