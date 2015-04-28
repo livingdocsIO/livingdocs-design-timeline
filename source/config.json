@@ -193,7 +193,8 @@
       "identifier": "teaserImage",
       "type": "image",
       "matches": ["hero.image", "normal.image", "full-size.image", "peephole.image"],
-      "isEditable": false
+      "isEditable": true,
+      "imageRatios": ["16:9", "1:1"]
     }
   ]
 }
