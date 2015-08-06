@@ -1,7 +1,7 @@
 {
   "name": "timeline",
   "label": "Timeline",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
 
   "assets": {
@@ -173,27 +173,40 @@
     }
   },
 
+  "componentCards": [
+    {
+      "name": "default-teaser",
+      "component": "teaser",
+      "wrapper": "<div class='funky-wrapper doc-section'></div>",
+      "isDefault": true
+    }
+  ],
+
   "metadata": [
     {
       "identifier": "title",
       "type": "text",
-      "matches": ["hero.title", "title.title", "head.title"]
+      "matches": ["hero.title", "title.title", "head.title"],
+      "isEditable": true
     },
     {
       "identifier": "description",
       "type": "text",
-      "matches": ["head.text", "p.text"]
+      "matches": ["head.text", "p.text"],
+      "isEditable": true
     },
     {
       "identifier": "author",
       "type": "text",
-      "matches": ["hero.text"]
+      "matches": ["hero.text"],
+      "isEditable": true
     },
     {
       "identifier": "teaserImage",
       "type": "image",
       "matches": ["hero.image", "normal.image", "full-size.image", "peephole.image"],
-      "isEditable": false
+      "isEditable": true,
+      "imageRatios": ["4:3"]
     }
   ]
 }
