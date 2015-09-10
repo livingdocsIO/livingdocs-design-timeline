@@ -178,7 +178,21 @@
       "name": "default-teaser",
       "component": "teaser",
       "wrapper": "<div class='funky-wrapper doc-section'></div>",
-      "isDefault": true
+      "isDefault": true,
+      "mapping": {
+        "title": {
+          "dataField": "title",
+          "type": "string"
+        },
+        "image": {
+          "dataField": "teaserImage",
+          "type": "image"
+        },
+        "site": {
+          "dataField": "author",
+          "type": "string"
+        }
+      }
     }
   ],
 
