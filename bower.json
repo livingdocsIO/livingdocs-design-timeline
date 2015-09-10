@@ -3,7 +3,7 @@
   "version": "0.4.1",
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
   "devDependencies": {
-    "livingdocs-engine": "git@github.com:upfrontIO/livingdocs-framework.git#v0.15.0",
+    "livingdocs-engine": "git@github.com:upfrontIO/livingdocs-framework.git#v0.18.1",
     "editable": "git@github.com:upfrontIO/editable.js.git#~0.4.1",
     "jquery": "~2.1.1"
   },
