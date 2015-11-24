@@ -1,6 +1,6 @@
 {
   "name": "livingdocs-design-timeline",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
   "scripts": {
     "start": "grunt server"
