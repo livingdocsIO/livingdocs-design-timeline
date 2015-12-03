@@ -18,5 +18,23 @@
     background-size: 100px 100px;
   }
 
+  &.facebook .placeholder {
+    min-height: 200px;
+
+    background-image: url('../assets/images/facebook-embed.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+  }
+
+  &.list .placeholder {
+    min-height: 200px;
+
+    background-image: url('../assets/images/list.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
+  }
+
 }
 

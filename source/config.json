@@ -1,7 +1,7 @@
 {
   "name": "timeline",
   "label": "Timeline",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
 
   "assets": {
@@ -128,6 +128,62 @@
       "components": ["event"]
     }
   ],
+
+  "layouts": [
+    {
+      "name": "page",
+      "caption": "Page",
+      "wrapper": "<div class='funky-wrapper doc-section'></div>",
+      "icon": null,
+      "defaultContent": [
+        { "identifier": "timeline.list" }
+      ],
+      "groups": [
+        {
+          "label": "Embeds",
+          "components": ["iframe"]
+        },
+        {
+          "label": "Collection",
+          "components": ["teaser", "list"]
+        }
+      ]
+    },
+    {
+      "name": "article",
+      "caption": "Article",
+      "wrapper": "<div class='funky-wrapper doc-section'></div>",
+      "icon": null,
+      "groups": [
+        {
+          "label": "Collection",
+          "components": ["teaser"]
+        },
+        {
+          "label": "Headers",
+          "components": ["head", "hero", "title"]
+        },
+        {
+          "label": "Text",
+          "components": ["p", "quote", "subtitle", "separator", "list-item", "aside"]
+        },
+        {
+          "label": "Images",
+          "components": ["full-size", "grid-of-6", "normal", "peephole"]
+        },
+        {
+          "label": "Embeds",
+          "components": ["tweet", "iframe"]
+        },
+        {
+          "label": "Timeline",
+          "components": ["event"]
+        }
+      ]
+    }
+  ],
+
+  "defaultLayout": "article",
 
   "defaultComponents": {
     "paragraph": "p",
