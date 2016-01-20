@@ -1,14 +1,38 @@
 <script type="ld-conf">
 {
-  "label": "List"
+  "label": "List Medium",
+  "directives": {
+    "link": {
+      "prefill": {
+        "title": {
+          "key": "title",
+          "provider": "iframely"
+        }
+      }
+    },
+    "list": {
+      "service": "list",
+      "defaultParams": {
+        "layout": "list-medium"
+      }
+    }
+  }
 }
 </script>
 
 
 <div class="embed-container">
-  <div doc-include="list" class="ld-abstract-preview">
-    <div class="embed list">
-      <div class="placeholder"></div>
+  <a class="container__head" doc-link="link">
+    <h1 class="container__head-link" doc-editable="title">Titel</h1>
+  </a>
+  <div class="embed list" doc-include="list">
+    <div class="placeholder">
+      LIST PLACEHOLDER
     </div>
   </div>
+  <ld-include data-include-service="advertisements">
+    <div class="embed advertisements">
+      ADS PLACEHOLDER
+    </div>
+  </ld-include>
 </div>
