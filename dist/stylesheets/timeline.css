@@ -925,7 +925,7 @@ figure.left {
 }
 /* line 49, ../../source/stylesheets/timeline/snippets/_figure.scss */
 .background {
-  background: url('/source/assets/images/mountains.jpg?1421240752') center center;
+  background: url('/source/assets/images/mountains.jpg?1448354309') center center;
   background-size: cover;
   min-height: 20.22222rem;
 }
@@ -1851,4 +1851,20 @@ hr.separator:before {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 100px 100px;
+}
+/* line 21, ../../source/stylesheets/editor/_embeds.scss */
+.embed.facebook .placeholder {
+  min-height: 200px;
+  background-image: url("../assets/images/facebook-embed.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+/* line 30, ../../source/stylesheets/editor/_embeds.scss */
+.embed.list .placeholder {
+  min-height: 200px;
+  background-image: url("../assets/images/list.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 400px 400px;
 }
