@@ -121,7 +121,7 @@
     },
     {
       "label": "Embeds",
-      "components": ["tweet", "iframe"]
+      "components": ["tweet", "iframe", "list"]
     },
     {
       "label": "Timeline",
@@ -173,7 +173,7 @@
         },
         {
           "label": "Embeds",
-          "components": ["tweet", "iframe"]
+          "components": ["tweet", "iframe", "list"]
         },
         {
           "label": "Timeline",
