@@ -5,7 +5,8 @@
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
 
   "assets": {
-    "css": ["./stylesheets/timeline.css"]
+    "css": ["./stylesheets/timeline.css"],
+    "js": ["./assets/scripts/full_height.js"]
   },
 
   "wrapper": "<div class='funky-wrapper doc-section'></div>",

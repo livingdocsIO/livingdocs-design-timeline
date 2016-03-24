@@ -1,13 +1,6 @@
 .peephole {
   figure {
     @extend .full-width;
-    @extend .full-height;
     @include image-container;
-  }
-
-  &.half-height {
-    figure {
-      @extend .half-height;
-    }
   }
 }
