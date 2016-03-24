@@ -2,9 +2,9 @@
   var styleTag;
 
   var setStyleTag = function(height) {
-    console.log('setting to height:' + height)
     styleTag = document.createElement('style')
     styleTag.textContent = '.full-height {min-height: ' + height + 'px}'
+    styleTag.textContent += '.half-height {min-height: ' + height / 2 + 'px}'
     document.head.appendChild(styleTag)
   }
 
