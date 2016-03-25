@@ -92,6 +92,7 @@ grunt.initConfig
           'assets/images/**'
           'assets/scripts/**'
           'index.html'
+          'iframe.html'
         ]
         dest: '.tmp/'
         # exclude empty directories
