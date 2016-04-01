@@ -1,7 +1,7 @@
 {
   "name": "timeline",
   "label": "Timeline",
-  "version": "0.4.2",
+  "version": "0.4.4",
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
 
   "assets": {
@@ -121,7 +121,7 @@
     },
     {
       "label": "Embeds",
-      "components": ["tweet", "iframe"]
+      "components": ["tweet", "iframe", "free-html"]
     },
     {
       "label": "Timeline",
