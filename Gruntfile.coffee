@@ -133,7 +133,7 @@ grunt.initConfig
 
   bump:
     options:
-      files: ['package.json', 'bower.json', 'source/config.json']
+      files: ['package.json', 'source/config.json']
       commitFiles: ['-a'], # '-a' for all files
       pushTo: 'origin'
       push: true
@@ -160,18 +160,26 @@ grunt.registerTask "postCompile", [
   "clean:postBuild"
 ]
 
-grunt.registerTask "build", [
+grunt.registerTask "build-design-dev", [
   "clean:preBuild"
   "jade"
   "lddesign:development"
   "postCompile"
 ]
 
+grunt.registerTask "build-design", [
+  "clean:preBuild"
+  "jade"
+  "lddesign:build"
+  "postCompile"
+]
+
 grunt.registerTask "serve", [
-  "build"
+  "build-design-dev"
   "express"
   "watch"
 ]
+
 
 
 # Release a new version
@@ -181,13 +189,13 @@ grunt.registerTask "serve", [
 # release:patch
 # release:minor
 # release:major
-grunt.registerTask 'release', (type) ->
+grunt.registerTask 'prepare-design-publish', (type) ->
   type ?= 'patch'
   grunt.task.run('bump-only:' + type)
-  grunt.task.run('build')
+  grunt.task.run('build-design')
   grunt.task.run('bump-commit')
 
 
 
 grunt.registerTask "dev", ["serve"]
-grunt.registerTask "default", ["build"]
+grunt.registerTask "default", ["build-design"]

@@ -3,7 +3,8 @@
   "version": "0.4.2",
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
   "scripts": {
-    "start": "grunt server"
+    "start": "grunt server",
+    "publish-design": "grunt build-design && ldm design:publish dist"
   },
   "dependencies": {
     "@livingdocs/framework": "^4.1.0",
