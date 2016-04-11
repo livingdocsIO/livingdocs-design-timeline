@@ -4,10 +4,10 @@
 
     // definitions
     var styleTag;
-    var setStyleTag = function(height) {
+    var setStyleTag = function(height, units) {
       styleTag = document.createElement('style')
-      styleTag.textContent = '.full-height {min-height: ' + height + 'px}'
-      styleTag.textContent += '.half-height {min-height: ' + height / 2 + 'px}'
+      styleTag.textContent = '.ld-full-height {min-height: ' + height + units + '}'
+      styleTag.textContent += '.ld-half-height {min-height: ' + height / 2 + units + '}'
       document.head.appendChild(styleTag)
     }
     var getViewportHeight = function(cb){
@@ -18,33 +18,33 @@
     if(window.parentIFrame !== undefined) {
       getViewportHeight = function(cb) {
         window.parentIFrame.getPageInfo(function(data){
-          cb(data.clientHeight)
+          cb(data.clientHeight, 'px')
         })
       }
     }
     // in a general Iframe
     else if(window.top != window.self) {
       getViewportHeight = function(cb) {
-        cb(500)
+        cb(100, 'vh')
       }
     }
     // not in an Iframe
     else {
       getViewportHeight = function(cb) {
-        cb(window.innerHeight)
+        cb(window.innerHeight, 'px')
       }
     }
 
     // initial setting of the height
-    getViewportHeight(function(viewportHeight){
-      setStyleTag(viewportHeight)
+    getViewportHeight(function(viewportHeight, units){
+      setStyleTag(viewportHeight, units)
     })
 
     // setting on each resize event
     window.addEventListener('resize', function(){
-      getViewportHeight(function(viewportHeight){
+      getViewportHeight(function(viewportHeight, units){
         styleTag.remove()
-        setStyleTag(viewportHeight)
+        setStyleTag(viewportHeight, units)
       })
     })
 
