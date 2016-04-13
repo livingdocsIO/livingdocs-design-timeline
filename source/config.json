@@ -1,12 +1,12 @@
 {
   "name": "timeline",
   "label": "Timeline",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
 
   "assets": {
-    "css": ["./stylesheets/timeline.css"],
-    "js": ["./assets/scripts/full_height.js"]
+    "css": ["./stylesheets/timeline.css", "./assets/stylesheets/slippry.css"],
+    "js": ["./assets/scripts/full_height.js", "./assets/scripts/jquery-2.1.3.min.js", "./assets/scripts/slippry.min.js", "./assets/scripts/activate_gallery.js"]
   },
 
   "wrapper": "<div class='funky-wrapper doc-section'></div>",
@@ -100,6 +100,27 @@
           "value": "bullets"
         }
       ]
+    },
+    "quote-slide-background-color": {
+      "label": "Background Color",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Default"
+        },
+        {
+          "caption": "Yellow",
+          "value": "media-gallery-quote-slide--yellow"
+        },
+        {
+          "caption": "Pink",
+          "value": "media-gallery-quote-slide--pink"
+        },
+        {
+          "caption": "Blue",
+          "value": "media-gallery-quote-slide--blue"
+        }
+      ]
     }
   },
 
@@ -122,7 +143,11 @@
     },
     {
       "label": "Embeds",
-      "components": ["tweet", "iframe"]
+      "components": ["tweet", "iframe", "free-html"]
+    },
+    {
+      "label": "Gallery",
+      "components": ["gallery", "image-slide", "media-slide", "quote-slide"]
     },
     {
       "label": "Timeline",
