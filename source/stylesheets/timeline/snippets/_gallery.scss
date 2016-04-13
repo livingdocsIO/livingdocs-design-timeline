@@ -21,10 +21,6 @@
   }
 }
 
-.media-gallery-media-slide {
-
-}
-
 .media-gallery-quote-slide {
 
   .centered-content {
@@ -35,6 +31,7 @@
     position: relative;
     float: none;
     width: 100%;
+
     &::before {
       content: '\201C';
       display: block;
@@ -50,24 +47,23 @@
   }
 
   blockquote p {
-    margin: 0;
-    margin-bottom: 4%;
+    margin: 0 0 4% 0;
+    padding: 3% 0 0 0;
 
-    padding: 0;
-    padding-top: 3%;
-
-    font-weight: 400;
     font-size: 3em;
-    line-height: 1.1;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.05);
-  }
-
-  p {
     line-height: 1.5;
-    font-size: 0.9em;
-    font-weight: bold;
+    font-weight: normal;
     text-align: center;
   }
+
+  blockquote footer {
+    text-align: center;
+
+    &:after {
+      content: none;
+    }
+  }
+
 }
 
 .media-gallery-quote-slide--blue {
@@ -77,10 +73,8 @@
     color: #FEFBDF;
   }
 
-  p {
-
-    color: rgba(43, 65, 77, .6);
-    font-weight: 400;
+  p, blockquote footer {
+    color: rgba(43, 65, 77, .85);
   }
 }
 
@@ -91,10 +85,8 @@
     color: #FEFBDF;
   }
 
-  p {
-
-    color: rgba(43, 65, 77, .6);
-    font-weight: 400;
+  p, blockquote footer {
+    color: rgba(43, 65, 77, .85);
   }
 }
 
@@ -105,14 +97,34 @@
     color: #FEFBDF;
   }
 
-  p {
-
-    color: rgba(43, 65, 77, .6);
-    font-weight: 400;
+  p, blockquote footer {
+    color: rgba(43, 65, 77, .85);
   }
 }
 
+
+
+// Overide pagination dots styles
+.media-gallery {
+  .sy-pager li.sy-active a {
+    background-color: #333;
+  }
+
+  .sy-pager li {
+    width: .8em;
+    height: .8em;
+  }
+}
+
+
+
 @media only screen and (max-width: 400px) {
+
+  .media-gallery .sy-pager li {
+    width: .5em;
+    height: .5em;
+  }
+
   .media-gallery-quote-slide {
     blockquote {
       &::before {
@@ -124,10 +136,12 @@
         font-size: 2em;
       }
     }
+
     p {
       font-size: 0.7em;
       font-weight: bold;
       text-align: center;
     }
   }
+
 }
