@@ -6,7 +6,7 @@
 
   "assets": {
     "css": ["./stylesheets/timeline.css", "./assets/stylesheets/slippry.css"],
-    "js": ["https://code.jquery.com/jquery-2.1.3.min.js", "./assets/scripts/slippry.min.js", "./assets/scripts/activate_gallery.js"]
+    "js": ["./assets/scripts/jquery-2.1.3.min.js", "./assets/scripts/slippry.min.js", "./assets/scripts/activate_gallery.js"]
   },
 
   "wrapper": "<div class='funky-wrapper doc-section'></div>",
