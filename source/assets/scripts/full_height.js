@@ -6,8 +6,8 @@
     var styleTag;
     var setStyleTag = function(height, units) {
       styleTag = document.createElement('style')
-      styleTag.textContent = '.ld-full-height {min-height: ' + height + units + '}'
-      styleTag.textContent += '.ld-half-height {min-height: ' + height / 2 + units + '}'
+      styleTag.textContent = '.full-height {min-height: ' + height + units + '}'
+      styleTag.textContent += '.half-height {min-height: ' + height / 2 + units + '}'
       document.head.appendChild(styleTag)
     }
     var getViewportHeight = function(cb){
