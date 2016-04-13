@@ -1,13 +1,13 @@
 {
   "name": "livingdocs-design-timeline",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
   "scripts": {
     "start": "grunt server",
     "publish-design": "grunt build-design && ldm design:publish dist"
   },
   "dependencies": {
-    "@livingdocs/framework": "^4.1.0",
+    "@livingdocs/framework": "^4.6.3",
     "coffee-script": "^1.7.1",
     "color": "^0.6.0",
     "express": "^4.1.1",

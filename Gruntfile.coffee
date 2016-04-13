@@ -90,6 +90,8 @@ grunt.initConfig
         cwd: './source'
         src:[
           'assets/images/**'
+          'assets/scripts/**'
+          'assets/stylesheets/**'
           'index.html'
         ]
         dest: '.tmp/'
