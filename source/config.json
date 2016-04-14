@@ -1,12 +1,12 @@
 {
   "name": "timeline",
   "label": "Timeline",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
 
   "assets": {
     "css": ["./stylesheets/timeline.css", "./assets/stylesheets/slippry.css"],
-    "js": ["./assets/scripts/jquery-2.1.3.min.js", "./assets/scripts/slippry.min.js", "./assets/scripts/activate_gallery.js"]
+    "js": ["./assets/scripts/full_height.js", "./assets/scripts/jquery-2.1.3.min.js", "./assets/scripts/slippry.min.js", "./assets/scripts/activate_gallery.js"]
   },
 
   "wrapper": "<div class='funky-wrapper doc-section'></div>",

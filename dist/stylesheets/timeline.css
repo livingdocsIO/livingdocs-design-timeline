@@ -6,7 +6,7 @@
   http://coding.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
   http://atendesigngroup.com/blog/vertical-rhythm-compass
 */
-/* line 106, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 112.5%;
   line-height: 1.44444em;
@@ -462,45 +462,21 @@ hr {
 
 /* line 2, ../../source/stylesheets/shared/helpers/_all.scss */
 .full-width, .full-size figure, .peephole figure, .hero figure {
-  margin-left: 50%;
-}
-/* line 4, ../../source/stylesheets/shared/helpers/_all.scss */
-.full-width .container, .full-size figure .container, .peephole figure .container, .hero figure .container {
-  margin-left: -50vw;
-  width: 100vw;
+  margin-left: -50%;
+  margin-right: -50%;
 }
 
-/* line 10, ../../source/stylesheets/shared/helpers/_all.scss */
-.not-full-width {
-  margin-left: auto;
-}
-/* line 12, ../../source/stylesheets/shared/helpers/_all.scss */
-.not-full-width .container {
-  margin-left: auto;
-  width: auto;
-}
-
-/* line 18, ../../source/stylesheets/shared/helpers/_all.scss */
-.full-height, .peephole figure {
-  height: 100vh;
-}
-
-/* line 22, ../../source/stylesheets/shared/helpers/_all.scss */
-.half-height, .peephole.half-height figure {
-  height: 50vh;
-}
-
-/* line 26, ../../source/stylesheets/shared/helpers/_all.scss */
+/* line 9, ../../source/stylesheets/shared/helpers/_all.scss */
 .centered {
   text-align: center;
 }
 
-/* line 31, ../../source/stylesheets/shared/helpers/_all.scss */
+/* line 14, ../../source/stylesheets/shared/helpers/_all.scss */
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
 }
-/* line 37, ../../source/stylesheets/shared/helpers/_all.scss */
+/* line 20, ../../source/stylesheets/shared/helpers/_all.scss */
 .clearfix:after {
   clear: both;
 }
@@ -523,7 +499,7 @@ body .base-layout {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../.rvm/gems/ruby-2.1.3/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
 .layout:after, body:after, body .base-layout:after {
   content: " ";
   display: block;
@@ -925,7 +901,7 @@ figure.left {
 }
 /* line 49, ../../source/stylesheets/timeline/snippets/_figure.scss */
 .background {
-  background: url('/source/assets/images/mountains.jpg?1422353355') center center;
+  background: url('/source/assets/images/mountains.jpg?1421240752') center center;
   background-size: cover;
   min-height: 20.22222rem;
 }
@@ -1019,6 +995,14 @@ figure.caption-inside-fade figcaption, .grid-of-6.inside-caption figure figcapti
   height: inherit;
 }
 
+/* line 2, ../../source/stylesheets/timeline/snippets/_peephole.scss */
+.peephole figure {
+  min-height: 600px;
+}
+/* line 5, ../../source/stylesheets/timeline/snippets/_peephole.scss */
+.peephole figure .container {
+  min-height: 600px;
+}
 /* line 8, ../../source/stylesheets/shared/mixins/_all.scss */
 .peephole figure .image-container {
   background-position: center center;
@@ -1106,7 +1090,7 @@ blockquote footer:after {
   margin-bottom: 1.44444rem;
   clear: both;
 }
-/* line 12, ../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../.rvm/gems/ruby-2.1.3/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
 .event:after {
   content: " ";
   display: block;
@@ -1836,6 +1820,142 @@ hr.separator:before {
   text-shadow: none;
 }
 
+/* line 1, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery {
+  margin: 20px 0;
+}
+/* line 4, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery h2 {
+  font-size: 26px;
+  padding: 10px 0 8px;
+}
+/* line 9, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery ul {
+  min-height: 30px;
+}
+/* line 13, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery li {
+  list-style: none;
+}
+
+/* line 19, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-image-slide img {
+  width: 100%;
+}
+
+/* line 26, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide .centered-content {
+  padding: 70px 20px;
+}
+/* line 30, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide blockquote {
+  position: relative;
+  float: none;
+  width: 100%;
+}
+/* line 35, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide blockquote::before {
+  content: '\201C';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 5em;
+  color: rgba(43, 65, 77, 0.2);
+  z-index: -1;
+  text-align: center;
+}
+/* line 49, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide blockquote p {
+  margin: 0 0 4% 0;
+  padding: 3% 0 0 0;
+  font-size: 3em;
+  line-height: 1.5;
+  font-weight: normal;
+  text-align: center;
+}
+/* line 59, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide blockquote footer {
+  text-align: center;
+}
+/* line 62, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide blockquote footer:after {
+  content: none;
+}
+
+/* line 69, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide--blue {
+  background-color: #358EBC;
+}
+/* line 72, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide--blue blockquote p {
+  color: #FEFBDF;
+}
+/* line 76, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide--blue p, .media-gallery-quote-slide--blue blockquote footer {
+  color: rgba(43, 65, 77, 0.85);
+}
+
+/* line 81, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide--pink {
+  background-color: #F36A71;
+}
+/* line 84, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide--pink blockquote p {
+  color: #FEFBDF;
+}
+/* line 88, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide--pink p, .media-gallery-quote-slide--pink blockquote footer {
+  color: rgba(43, 65, 77, 0.85);
+}
+
+/* line 93, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide--yellow {
+  background-color: #F0C854;
+}
+/* line 96, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide--yellow blockquote p {
+  color: #FEFBDF;
+}
+/* line 100, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery-quote-slide--yellow p, .media-gallery-quote-slide--yellow blockquote footer {
+  color: rgba(43, 65, 77, 0.85);
+}
+
+/* line 109, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery .sy-pager li.sy-active a {
+  background-color: #333;
+}
+/* line 113, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+.media-gallery .sy-pager li {
+  width: .8em;
+  height: .8em;
+}
+
+@media only screen and (max-width: 400px) {
+  /* line 123, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+  .media-gallery .sy-pager li {
+    width: .5em;
+    height: .5em;
+  }
+
+  /* line 130, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+  .media-gallery-quote-slide blockquote::before {
+    font-size: 3em;
+  }
+  /* line 134, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+  .media-gallery-quote-slide blockquote p {
+    font-weight: 300;
+    font-size: 2em;
+  }
+  /* line 140, ../../source/stylesheets/timeline/snippets/_gallery.scss */
+  .media-gallery-quote-slide p {
+    font-size: 0.7em;
+    font-weight: bold;
+    text-align: center;
+  }
+}
 /* line 3, ../../source/stylesheets/editor/_embeds.scss */
 .embed.tweet .placeholder {
   min-height: 200px;

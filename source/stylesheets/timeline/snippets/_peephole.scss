@@ -1,13 +1,10 @@
 .peephole {
   figure {
     @extend .full-width;
-    @extend .full-height;
-    @include image-container;
-  }
-
-  &.half-height {
-    figure {
-      @extend .half-height;
+    min-height: 600px; 
+    .container {
+      min-height: 600px;
     }
+    @include image-container;
   }
 }
