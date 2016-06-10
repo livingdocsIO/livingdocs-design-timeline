@@ -6,7 +6,7 @@
   http://coding.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/
   http://atendesigngroup.com/blog/vertical-rhythm-compass
 */
-/* line 106, ../../../../.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 112.5%;
   line-height: 1.44444em;
@@ -499,7 +499,7 @@ body .base-layout {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../.rvm/gems/ruby-2.1.3/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../.rvm/gems/ruby-2.1.3/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
 .layout:after, body:after, body .base-layout:after {
   content: " ";
   display: block;
@@ -901,7 +901,7 @@ figure.left {
 }
 /* line 49, ../../source/stylesheets/timeline/snippets/_figure.scss */
 .background {
-  background: url('/source/assets/images/mountains.jpg?1462266129') center center;
+  background: url('/source/assets/images/mountains.jpg?1421240752') center center;
   background-size: cover;
   min-height: 20.22222rem;
 }
@@ -1090,7 +1090,7 @@ blockquote footer:after {
   margin-bottom: 1.44444rem;
   clear: both;
 }
-/* line 12, ../../../../.rvm/gems/ruby-2.1.3/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../.rvm/gems/ruby-2.1.3/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
 .event:after {
   content: " ";
   display: block;
