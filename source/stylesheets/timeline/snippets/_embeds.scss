@@ -1,23 +1,33 @@
 .embed {
-  color: $light-black-color;
-  border: 1px dashed $light-black-color;
-  box-sizing: border-box;
-}
 
-.embed.tweet .placeholder {
-  min-height: 200px;
-  background-image: url(../assets/images/tweet-embed.svg);
-  background-position: 50% 50%;
-  background-size: 100px 100px;
-  background-repeat: no-repeat;
-}
+  .placeholder {
+    color: $light-black-color;
 
-.embed.iframe .placeholder {
-  min-height: 200px;
-  background-image: url(../assets/images/iframe-embed.svg);
-  background-position: 50% 30%;
-  background-size: 100px 100px;
-  background-repeat: no-repeat;
+    min-height: 200px;
+    box-sizing: border-box;
+    background-color: #efefef;
+    background-position: 50% 50%;
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    box-shadow: 0 2px 3px rgba(0,0,0,.3);
+  }
+
+  &.tweet .placeholder {
+    background-image: url('../assets/images/tweet-embed.svg');
+  }
+
+  &.iframe .placeholder {
+    background-image: url('../assets/images/iframe-embed.svg');
+  }
+
+  &.free-html .placeholder {
+    background-image: url('../assets/images/html-embed.svg');
+  }
+
+  &.teaser_ .placeholder {
+    background-image: url('../assets/images/teaser-embed.svg');
+  }
+
 }
 
 .embed-container {
