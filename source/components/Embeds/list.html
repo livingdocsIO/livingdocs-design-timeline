@@ -3,19 +3,8 @@
   "label": "List",
   "properties": ["hide-image"],
   "directives": {
-    "link": {
-      "prefill": {
-        "title": {
-          "key": "title",
-          "provider": "iframely"
-        }
-      }
-    },
     "timeline-list": {
       "service": "timeline-list"
-    },
-    "title": {
-      "plainText": true
     }
   }
 }
@@ -23,9 +12,6 @@
 
 
 <div class="embed-container">
-  <a class="container__head" doc-link="link">
-    <h1 class="container__head-link" doc-editable="title">Titel</h1>
-  </a>
   <div class="embed list" doc-include="timeline-list">
     <div class="placeholder">
     </div>
