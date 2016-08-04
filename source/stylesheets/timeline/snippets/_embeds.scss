@@ -28,6 +28,10 @@
     background-image: url('../assets/images/teaser-embed.svg');
   }
 
+  &.list .placeholder {
+    background-image: url('../assets/images/teaser-list.svg');
+  }
+
 }
 
 .embed-container {
