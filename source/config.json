@@ -121,6 +121,24 @@
           "value": "media-gallery-quote-slide--blue"
         }
       ]
+    },
+    "list-type": {
+      "label": "List Type",
+      "type": "select",
+      "options": [
+        {
+          "caption": "Bullets"
+        }, {
+          "caption": "Numbers",
+          "value": "decimal"
+        }, {
+          "caption": "Letters",
+          "value": "lower-latin"
+        }, {
+          "caption": "Romans",
+          "value": "lower-roman"
+        }
+      ]
     }
   },
 
@@ -135,7 +153,7 @@
     },
     {
       "label": "Text",
-      "components": ["p", "quote", "subtitle", "separator", "list-item", "aside"]
+      "components": ["p", "quote", "subtitle", "separator", "aside", "bullet-list"]
     },
     {
       "label": "Images",
