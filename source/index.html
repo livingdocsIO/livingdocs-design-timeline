@@ -27,6 +27,10 @@
 </head>
   <body lang="en">
 
+    <h1>Page Management</h1>
+    <article class="page"></article>
+    <div style="clear: both"></div>
+    <h1>Article View</h1>
     <article class="article"></article>
 
     <!-- Code to load and insert the article into the page -->
@@ -37,11 +41,10 @@
           // Load the design
           doc.design.load(design.timeline, { basePath: '/' });
 
-          // Create the document
+          /* ARTICLE */
+          // Create the article
           var article = doc.createLivingdoc({
             content: [{
-              "component": "top-row"
-            },{
               "component": "hero",
               "content": {
                 "image": "assets/images/mountains.jpg"
@@ -226,9 +229,32 @@
           });
 
 
-          // Insert the article into the page
+          // Insert the article
           article.createView({
             host: '.article',
+            interactive: true,
+            loadResources: false,
+            iframe: false
+          });
+
+          /* PAGE */
+          // Create the page
+          var page = doc.createLivingdoc({
+            content: [
+              {
+                "component": "top-row"
+              }
+            ],
+            design: {
+              name: design.timeline.name,
+              version: design.timeline.version
+            },
+            layout: 'page'
+          });
+
+          // insert the page
+          page.createView({
+            host: '.page',
             interactive: true,
             loadResources: false,
             iframe: false
