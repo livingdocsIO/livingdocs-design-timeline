@@ -41,6 +41,31 @@
           // Load the design
           doc.design.load(design.timeline, { basePath: '/' });
 
+          /* PAGE */
+          // Create the page
+          var page = doc.createLivingdoc({
+            content: [
+              {
+                "component": "top-row"
+              }, {
+                "component": "top-row-resolved"
+              }
+            ],
+            design: {
+              name: design.timeline.name,
+              version: design.timeline.version
+            },
+            layout: 'page'
+          });
+
+          // insert the page
+          page.createView({
+            host: '.page',
+            interactive: true,
+            loadResources: false,
+            iframe: false
+          });
+
           /* ARTICLE */
           // Create the article
           var article = doc.createLivingdoc({
@@ -232,29 +257,6 @@
           // Insert the article
           article.createView({
             host: '.article',
-            interactive: true,
-            loadResources: false,
-            iframe: false
-          });
-
-          /* PAGE */
-          // Create the page
-          var page = doc.createLivingdoc({
-            content: [
-              {
-                "component": "top-row"
-              }
-            ],
-            design: {
-              name: design.timeline.name,
-              version: design.timeline.version
-            },
-            layout: 'page'
-          });
-
-          // insert the page
-          page.createView({
-            host: '.page',
             interactive: true,
             loadResources: false,
             iframe: false

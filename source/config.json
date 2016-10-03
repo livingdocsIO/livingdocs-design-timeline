@@ -9,8 +9,6 @@
     "js": ["./assets/scripts/full_height.js", "./assets/scripts/jquery-2.1.3.min.js", "./assets/scripts/slippry.min.js", "./assets/scripts/activate_gallery.js"]
   },
 
-  "wrapper": "<div class='funky-wrapper doc-section'></div>",
-
   "componentProperties": {
     "fixed-background": {
       "label": "Fixed Background",
@@ -146,7 +144,7 @@
     {
       "name": "regular",
       "caption": "Article",
-      "wrapper": "<div class='funky-wrapper doc-section'></div>",
+      "wrapper": "<div class=\"funky-wrapper doc-section\"></div>",
       "icon": null,
       "defaultContent": [
         { "identifier": "timeline.head" },
@@ -195,7 +193,7 @@
     }, {
       "name": "page",
       "caption": "Page",
-      "wrapper": "<div class='funky-page-wrappper doc-section'></div>",
+      "wrapper": "<div class=\"funky-page-wrapper doc-section\"></div>",
       "icon": null,
       "defaultContent": [],
       "groups": [
@@ -248,29 +246,6 @@
       }
     }
   },
-
-  "componentCards": [
-    {
-      "name": "default-teaser",
-      "component": "teaser",
-      "wrapper": "<div class='funky-wrapper doc-section'></div>",
-      "isDefault": true,
-      "mapping": {
-        "title": {
-          "dataField": "title",
-          "type": "string"
-        },
-        "image": {
-          "dataField": "teaserImage",
-          "type": "image"
-        },
-        "site": {
-          "dataField": "author",
-          "type": "string"
-        }
-      }
-    }
-  ],
 
   "metadata": [
     {
