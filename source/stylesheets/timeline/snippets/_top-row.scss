@@ -10,7 +10,7 @@
 .top-row__item {
   width: 100%;
   margin-bottom: 1em;
-  background-color: #f1f3f2;
+  background-color: $c-gray-seven;
   @include breakpoint($medium-screen) {
     height: 500px;
     width: 48%;
@@ -29,7 +29,7 @@
   background-position: center;
   &:hover {
     .headline {
-      background-color: $livingdocs-color;
+      background-color: $c-green-two;
     }
   }
 }
@@ -46,15 +46,18 @@
   @include breakpoint($small-screens) {
     padding: 0 1em 1em;
   }
+  @include breakpoint($large-screen) {
+    padding: 1em 1.5em;
+  }
 }
 
 .latest__item {
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.2;
-  color: $font-color;
+  color: $c-text;
 }
 
 .latest__title {
@@ -62,8 +65,9 @@
   margin-left: 0;
   margin-right: 0;
   font-family: $font-serif;
+  font-weight: 700;
   font-style: italic;
-  background-color: $livingdocs-color;
+  background-color: $c-green-three;
   line-height: .6;
 }
 
@@ -73,17 +77,18 @@
 
 .latest__time {
   text-transform: uppercase;
-  color: gray;
+  color: $c-gray-three;
 }
 
-.featured {
+.teaser-tag {
   display: inline;
   margin-bottom: .5em;
   padding-left: .5em;
   padding-right: .5em;
-  background-color: $livingdocs-color;
-  color: white;
+  background-color: $c-green-two;
+  color: $c-white;
   font-family: $font-serif;
+  font-size: 1.5rem;
   font-weight: bold;
   font-style: italic;
 }
@@ -97,8 +102,8 @@
 .headline {
   display: inline;
   padding: 0 8px;
-  background-color: $font-color;
-  color: white;
+  background-color: $c-text;
+  color: $c-white;
   font-size: 1.5rem;
   font-weight: bold;
   -webkit-box-decoration-break: clone;
@@ -110,10 +115,17 @@
   display: inline;
   padding: 0 8px;
   margin-top: .25em;
-  background-color: $font-color;
-  color: white;
-  font-size: .875rem;
+  background-color: $c-text;
+  color: $c-white;
+  font-size: 1rem;
+  font-family: $font-serif;
+  font-weight: 700;
+  font-style: italic;
   -webkit-box-decoration-break: clone;
   -o-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+.author__name {
+  color: $c-blue-three;
 }
