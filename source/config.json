@@ -187,7 +187,7 @@
         },
         {
           "label": "Pages",
-          "components": ["top-row"]
+          "components": ["top-row", "teaser-row", "teaser-row-high", "teaser-row-text", "teaser-full-width"]
         }
       ]
     }, {
