@@ -261,15 +261,13 @@ a.teaser-row__item {
 
 
 // Placeholder for top 3 skyscraper teasers
-.top-teasers {
-  .placeholder {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: url('../assets/images/top-row-articles.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 74.6%;
-    height: 600px;
-  }
+.placeholder--top-teasers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url('../assets/images/top-row-articles.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 74.6%;
+  height: 600px;
 }
