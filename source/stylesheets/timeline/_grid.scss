@@ -2,7 +2,6 @@
 $body-padding: rhythm(1/2);
 
 body {
-  @extend .layout;
   padding: 0 $body-padding;
 
   @if not $debug {
@@ -15,7 +14,17 @@ body {
     width: 90%;
   }
 }
+
+// for articles
+.funky-wrapper {
+  @extend .layout;
+}
+
+// for pages
+.funky-page-wrapper {
+  max-width: 1400px;
+}
+
 .layout {
   @include container(6/4 * $text-width);
 }
-
