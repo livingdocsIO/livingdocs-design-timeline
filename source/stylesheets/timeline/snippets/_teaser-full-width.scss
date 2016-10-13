@@ -5,7 +5,6 @@
   justify-content: center;
   margin: 1.5em 0;
   height: 500px;
-  background-image: url('../assets/images/mountains.jpg');
   background-size: cover;
   background-position: center;
   @include breakpoint($small-screens) {
