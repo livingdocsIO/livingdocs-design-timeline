@@ -184,10 +184,6 @@
         {
           "label": "Timeline",
           "components": ["event"]
-        },
-        {
-          "label": "Pages",
-          "components": ["top-row", "teaser-row", "teaser-row-high", "teaser-row-text", "teaser-full-width"]
         }
       ]
     }, {
@@ -199,10 +195,10 @@
       "groups": [
         {
           "label": "Single Teasers",
-          "components": ["teaser", "embed-teaser"]
+          "components": ["teaser-full-width", "teaser", "embed-teaser"]
         }, {
           "label": "Collection Teasers",
-          "components": ["top-row"]
+          "components": ["top-row", "teaser-row", "teaser-row-high", "teaser-row-text"]
         }, {
           "label": "Embeds",
           "components": ["tweet", "iframe", "free-html"]
