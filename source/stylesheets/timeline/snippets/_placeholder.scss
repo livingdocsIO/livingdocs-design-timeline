@@ -37,6 +37,7 @@
     @extend %placeholder-bg;
     background-image: url('../assets/images/teaser-row.svg');
     height: 239px;
+    width: 100vw;
   }
 }
 
@@ -69,5 +70,6 @@
     @extend %placeholder-bg;
     background-image: url('../assets/images/teaser-row-high.svg');
     height: 600px;
+    width: 100vw;
   }
 }
