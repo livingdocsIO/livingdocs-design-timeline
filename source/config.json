@@ -267,7 +267,7 @@
       "type": "image",
       "matches": ["hero.image", "normal.image", "full-size.image", "peephole.image"],
       "isEditable": true,
-      "imageRatios": ["4:3"]
+      "imageRatios": ["16:9"]
     }
   ]
 }
