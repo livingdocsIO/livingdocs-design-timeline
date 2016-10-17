@@ -80,8 +80,12 @@ a.teaser-row__item {
   }
 }
 
-.teaser-row__item--gray {
+.teaser-row__item--latest {
   background-color: $c-gray-seven;
+  @include breakpoint($medium-screens-or-smaller) {
+    width: 100%;
+    min-height: 0;
+  }
 }
 
 .teaser-row__item--bg {
@@ -238,5 +242,34 @@ a.teaser-row__item {
   .teaser-author__name {
     color: $c-blue-three;
     text-decoration: none;
+  }
+}
+
+
+// Top 3 Teasers (right to latest news)
+.top-three-teasers {
+  @include breakpoint($small-screens) {
+    width: 100%;
+  }
+  @include breakpoint($medium-screen) {
+    display: flex;
+    justify-content: space-between;
+    .teaser-row__item {
+      width: 31.5%;
+    }
+  }
+  @include breakpoint($medium-screen-only) {
+    .teaser-row__headline .teaser-row__headline-inner {
+      font-size: 1.25rem;
+    }
+    .teaser-author {
+      font-size: .875rem;
+    }
+    .teaser-tag {
+      font-size: 1rem;
+    }
+  }
+  @include breakpoint($large-screen) {
+    width: 74.5%;
   }
 }
