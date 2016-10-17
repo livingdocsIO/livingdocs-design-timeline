@@ -29,14 +29,6 @@ grunt.initConfig
         ext: '.css'
       ]
 
-  compass:
-    dist:
-      options:
-        sassDir: 'source/stylesheets/'
-        cssDir: '.tmp/stylesheets/'
-        imagesDir: 'source/assets/images/',
-        require: ['susy', 'breakpoint']
-
   stylus:
     compile:
       options:
@@ -155,7 +147,6 @@ grunt.initConfig
 
 grunt.registerTask "postCompile", [
   "recess"
-  "compass"
   "stylus"
   "copy:assets"
   "copy:stylesheets"

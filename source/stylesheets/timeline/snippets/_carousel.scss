@@ -17,9 +17,6 @@ section.carousel {
         margin-left: rhythm(1);
       };
 
-      figcaption {
-        @include trailer(0);
-      }
     }
   }
 }

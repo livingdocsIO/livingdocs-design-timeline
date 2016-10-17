@@ -1,13 +1,6 @@
-// Body padding
-$body-padding: rhythm(1/2);
-
 body {
   @extend .layout;
-  padding: 0 $body-padding;
-
-  @if not $debug {
-    background-color: white;
-  }
+  padding: $body-padding;
   overflow-x: hidden; /* Hide horizontal scrollbar caused by 100vw elements */
 
   .base-layout {
@@ -18,4 +11,3 @@ body {
 .layout {
   @include container(6/4 * $text-width);
 }
-

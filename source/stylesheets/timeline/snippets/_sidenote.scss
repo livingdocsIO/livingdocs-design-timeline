@@ -1,11 +1,10 @@
 aside.sidenote {
-  @include adjust-font-size-to(0.8rem);
+  font-size: 0.8rem;
   font-family: $font-sans-serif;
 
   p, h4 {
-    @include adjust-font-size-to(0.8rem);
+    font-size: 0.8rem;
     @include squish(0);
-    @include rhythm(0);
   }
 
   &.right {
@@ -17,20 +16,13 @@ aside.sidenote {
     }
     @include breakpoint($medium-screen) {
       margin-left: 2 * gutter();
-      @include leader(1);
     }
-    @include rhythm(2);
     clear: right;
   }
 
   &.bleed {
-    @include bleed(rhythm(1/2));
-    @include leader(3/2);
-    @include trailer(3/2);
-
     @include breakpoint($medium-screen) {
       margin-left: 3/2 * gutter();
-      @include leader(1/2);
     }
     background: $upfront-color;
     color: white;

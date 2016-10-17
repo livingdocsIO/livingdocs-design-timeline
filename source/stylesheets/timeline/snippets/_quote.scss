@@ -1,6 +1,8 @@
 blockquote {
   color: lighten($font-color, 20%);
   position: relative;
+  margin-top: 3em;
+  margin-bottom: 3em;
 
   @include breakpoint($large-screen) {
     @include span(3);
@@ -13,19 +15,19 @@ blockquote {
   }
 
   .quotation-mark {
-    font-size: rhythm(4);
+    font-size: 7rem;
     float: left;
     position: relative;
-    top: rhythm(0.9);
+    top: -0.25em;
     left: -0.1ch;
     padding-right: 0.1ch;
   }
 
   p {
     @include squish(0);
-    @include adjust-font-size-to(1.5rem, 5/4);
+    font-size: 1.5rem;
     font-style: italic;
-    @include rhythm($leader: 0, $trailer: 1/2);
+    line-height: 1.2;
   }
 
   footer {
@@ -35,10 +37,9 @@ blockquote {
     &:after {
       content: '\2014';
       position: absolute;
-      left: 0;
+      left: 1.5em;
       top: 0;
     }
   }
 
-  @include rhythm(2);
 }

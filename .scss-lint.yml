@@ -166,6 +166,3 @@ linters:
 
   ZeroUnit:
     enabled: true
-
-  Compass::*:
-    enabled: false
