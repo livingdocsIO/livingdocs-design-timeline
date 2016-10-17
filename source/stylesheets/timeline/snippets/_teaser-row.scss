@@ -259,6 +259,7 @@ a.teaser-row__item {
     }
   }
   @include breakpoint($medium-screen-only) {
+    width: 100%;
     .teaser-row__headline .teaser-row__headline-inner {
       font-size: 1.25rem;
     }
