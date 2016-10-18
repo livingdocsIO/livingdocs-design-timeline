@@ -2,7 +2,7 @@
   $timeline-width: 3px;
   // The width of the time dash/mark
   $time-width: $timeline-width;
-  $time-length: rhythm(1/2);
+  $time-length: .75em;
   border-color: $timeline-color;
 
   // Define the tick or dash of the timeline
@@ -17,7 +17,7 @@
     @include breakpoint($medium-screens-or-smaller) {
       left: - $timeline-width / 2;
     }
-    top: rhythm() / 2;
+    top: .75em;
   }
 }
 
@@ -42,8 +42,12 @@
 }
 
 .event {
+  + .event {
+    margin-top: 0;
+  }
+
   $timeline-color: #ddd;
-  $font-size-adjust-to: 0.9rem;
+  font-size: 0.9rem;
 
   @include container(hide);
   clear: both;
@@ -53,14 +57,15 @@
   }
 
   main {
-    padding-top: (1rem - $font-size-adjust-to);
-
+    margin-top: 0;
     @include breakpoint($medium-screens-or-smaller) {
       @include span(5);
     }
     @include breakpoint($large-screen) {
       @include span(4 at 2);
       @include timeline($timeline-color);
+      padding-left: 1.5em;
+      border-left: 3px solid $timeline-color;
     }
 
     p {
@@ -103,6 +108,8 @@
 
     p {
       @include squish(0);
+      margin-top: 0;
+      font-size: 1rem;
     }
   }
 
