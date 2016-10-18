@@ -1,5 +1,8 @@
 .grid-of-6 {
   clear: both;
+  figure + figure {
+    margin-top: 0;
+  }
 
   &.small figure {
     @include span(1);
