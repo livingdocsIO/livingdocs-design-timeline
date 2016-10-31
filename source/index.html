@@ -27,6 +27,10 @@
 </head>
   <body lang="en">
 
+    <h1>Page Management</h1>
+    <article class="page"></article>
+    <div style="clear: both"></div>
+    <h1>Article View</h1>
     <article class="article"></article>
 
     <!-- Code to load and insert the article into the page -->
@@ -37,7 +41,52 @@
           // Load the design
           doc.design.load(design.timeline, { basePath: '/' });
 
-          // Create the document
+          /* PAGE */
+          // Create the page
+          var page = doc.createLivingdoc({
+            content: [
+              {
+                "component": "teaser-full-width"
+              }, {
+                "component": "teaser-full-width-resolved"
+              }, {
+                "component": "top-row"
+              }, {
+                "component": "top-row-resolved"
+              }, {
+                "component": "teaser-row"
+              }, {
+                "component": "teaser-row-resolved"
+              }, {
+                "component": "teaser-row-text"
+              }, {
+                "component": "teaser-row-text-resolved"
+              }, {
+                "component": "teaser-row-high"
+              }, {
+                "component": "section-title",
+              }, {
+                "component": "teaser-row-high-resolved"
+              }
+            ],
+            design: {
+              name: design.timeline.name,
+              version: design.timeline.version
+            },
+            layout: 'page'
+          });
+
+          // insert the page
+          page.createView({
+            host: '.page',
+            interactive: true,
+            loadResources: false,
+            iframe: false,
+            layoutName: 'page'
+          });
+
+          /* ARTICLE */
+          // Create the article
           var article = doc.createLivingdoc({
             content: [{
               "component": "hero",
@@ -224,7 +273,7 @@
           });
 
 
-          // Insert the article into the page
+          // Insert the article
           article.createView({
             host: '.article',
             interactive: true,
