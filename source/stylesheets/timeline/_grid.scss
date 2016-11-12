@@ -1,5 +1,4 @@
 body {
-  @extend .layout;
   padding: $body-padding;
   overflow-x: hidden; /* Hide horizontal scrollbar caused by 100vw elements */
 
@@ -8,6 +7,19 @@ body {
     width: 90%;
   }
 }
+
+// for articles
+.funky-wrapper {
+  @extend .layout;
+}
+
+// for pages
+.funky-page-wrapper {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .layout {
   @include container(6/4 * $text-width);
 }
