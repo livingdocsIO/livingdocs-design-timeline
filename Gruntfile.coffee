@@ -5,57 +5,17 @@ path = require('path')
 require('load-grunt-tasks')(grunt)
 
 grunt.initConfig
-  recess:
-    development:
-      options:
-        compile: true
-      files: [
-        expand: true
-        cwd: './source'
-        src:['stylesheets/*']
-        dest: '.tmp/'
-        ext: '.css'
-        filter: (src) ->
-          return src.split('/').pop()[0] != '_' && (src.indexOf('.css') != -1 || src.indexOf('.less') != -1)
-      ]
-
   sass:
     dist:
+      options:
+        style: 'expanded'
+        require: ['susy', 'breakpoint']
       files: [
         expand: true
         cwd: './source'
         src:['stylesheets/*.scss']
         dest: '.tmp/'
         ext: '.css'
-      ]
-
-  compass:
-    dist:
-      options:
-        sassDir: 'source/stylesheets/'
-        cssDir: '.tmp/stylesheets/'
-        imagesDir: 'source/assets/images/',
-        require: ['susy', 'breakpoint']
-
-  stylus:
-    compile:
-      options:
-        compress: true
-      files: [
-        expand: true
-        cwd: './source'
-        src: [ 'stylesheets/*.styl' ]
-        dest: '.tmp/'
-        ext: '.css'
-      ]
-
-  jade:
-    compile:
-      files: [
-        expand: true
-        cwd: './'
-        src: [ 'source/**/*.jade' ]
-        ext: '.html'
       ]
 
   lddesign:
@@ -154,9 +114,7 @@ grunt.initConfig
 
 
 grunt.registerTask "postCompile", [
-  "recess"
-  "compass"
-  "stylus"
+  "sass"
   "copy:assets"
   "copy:stylesheets"
   "copy:tmpToDist"
@@ -165,14 +123,12 @@ grunt.registerTask "postCompile", [
 
 grunt.registerTask "build-design-dev", [
   "clean:preBuild"
-  "jade"
   "lddesign:development"
   "postCompile"
 ]
 
 grunt.registerTask "build-design", [
   "clean:preBuild"
-  "jade"
   "lddesign:build"
   "postCompile"
 ]
