@@ -2,7 +2,6 @@
 // TODO: use our own grid instead of susy or flexbox
 .teaser-row {
   position: relative;
-  margin: 1.5em 0;
   font-family: $font-sans-serif;
   @include breakpoint($medium-screen) {
     display: flex;
@@ -41,15 +40,20 @@
 .teaser-row__item {
   display: block;
   width: 100%;
+  * + * {
+    margin-top: 0;
+  }
   margin-bottom: 1em;
   color: $c-text;
   line-height: 1.2;
   @include breakpoint($medium-screen) {
     width: 48%;
+    margin-top: 0;
     margin-bottom: 4%;
   }
   @include breakpoint($large-screen) {
     width: 23.5%;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -248,6 +252,7 @@ a.teaser-row__item {
 
 // Top 3 Teasers (right to latest news)
 .top-three-teasers {
+  margin-top: 0;
   @include breakpoint($small-screens) {
     width: 100%;
   }
