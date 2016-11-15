@@ -2,8 +2,7 @@
   $timeline-width: 3px;
   // The width of the time dash/mark
   $time-width: $timeline-width;
-  $time-length: rhythm(1/2);
-  @include apply-side-rhythm-border(left, $timeline-width);
+  $time-length: .75em;
   border-color: $timeline-color;
 
   // Define the tick or dash of the timeline
@@ -18,7 +17,7 @@
     @include breakpoint($medium-screens-or-smaller) {
       left: - $timeline-width / 2;
     }
-    top: rhythm() / 2;
+    top: .75em;
   }
 }
 
@@ -30,8 +29,6 @@
 
   border-color: $bullet-color-light;
   font-family: $font-sans-serif;
-
-  @include apply-side-rhythm-border(left, $timeline-width);
 
   &:before {
     border: $bullet-border-width solid $bullet-color-light;
@@ -45,14 +42,14 @@
 }
 
 .event {
+  + .event {
+    margin-top: 0;
+  }
+
   $timeline-color: #ddd;
-  $font-size-adjust-to: 0.9rem;
+  font-size: 0.9rem;
 
   @include container(hide);
-  @include trailer();
-  + .event {
-    @include leader(-1);
-  }
   clear: both;
 
   @include breakpoint($medium-screens-or-smaller) {
@@ -60,27 +57,22 @@
   }
 
   main {
-    @include adjust-font-size-to($font-size-adjust-to);
-    padding-top: (1rem - $font-size-adjust-to);
-
+    margin-top: 0;
     @include breakpoint($medium-screens-or-smaller) {
       @include span(5);
     }
     @include breakpoint($large-screen) {
       @include span(4 at 2);
       @include timeline($timeline-color);
+      padding-left: 1.5em;
+      border-left: 3px solid $timeline-color;
     }
 
     p {
       @include squish(0);
-      @include rhythm($leader: 0, $trailer: 0);
-      text-indent: rhythm(1);
 
       &:first-child {
         text-indent: 0;
-      }
-      &:last-child {
-        @include trailer(1);
       }
     }
 
@@ -111,13 +103,13 @@
 
     time {
       font-weight: 900;
-      @include adjust-font-size-to(1.2rem, 1);
+      font-size: 1.2rem;
     }
 
     p {
       @include squish(0);
-      @include rhythm(0);
-      @include adjust-font-size-to($font-size-adjust-to);
+      margin-top: 0;
+      font-size: 1rem;
     }
   }
 
@@ -132,10 +124,6 @@
       p {
         color: $bullet-color-light;
       }
-    }
-
-    p {
-      @include adjust-font-size-to($font-size-adjust-to);
     }
 
     @include breakpoint($medium-screens-or-smaller) {

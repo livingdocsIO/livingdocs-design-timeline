@@ -9,22 +9,19 @@ figure {
     height: 0;
     background-size: cover;
     background-position: center center;
-    @include debug-image;
   }
 
   img {
     width: 100%;
   }
 
+  @include breakpoint($large-screen) {
   // Use full width images on small screens
   @include breakpoint($small-screens) {
     margin-left: - $body-padding;
     margin-right: - $body-padding;
   }
 
-  @include trailer(1);
-
-  @include breakpoint($large-screen) {
     @include squish(1);
   }
 
@@ -32,6 +29,7 @@ figure {
     @include breakpoint($medium-screen) {
       @include span(3 at 4);
       margin-left: gutter();
+      margin-bottom: 1.5em;
     }
     clear: right;
   }
@@ -39,6 +37,7 @@ figure {
   &.left {
     @include breakpoint($medium-screen) {
       @include span(3);
+      margin-bottom: 1.5em;
     }
     @include breakpoint($large-screen) {
       @include span(2);
@@ -49,17 +48,12 @@ figure {
   @at-root .background {
     background: image-url('mountains.jpg') center center;
     background-size: cover;
-    min-height: rhythm(14);
   }
 
   figcaption {
     font-family: $font-sans-serif;
-    @include leader(1/4);
-    @include adjust-font-size-to(0.8rem, 0.8);
-
-    @include breakpoint($small-screens) {
-      @include pad($body-padding);
-    }
+    font-size: 0.9rem;
+    margin-top: 0.25em;
   }
 
   .middle-text {
@@ -82,8 +76,6 @@ figure {
       background: $light-black-color;
       color: white;
       display: block;
-      @include rhythm(0, 1/2, 1/2, 0);
-      @include pad(rhythm(1/2));
     }
   }
 
@@ -104,7 +96,6 @@ figure {
     @extend %caption-inside;
 
     figcaption {
-      @include padding-leader(2);
       background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%); /* FF3.6+ */
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.75))); /* Chrome,Safari4+ */
       background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%); /* Chrome10+,Safari5.1+ */

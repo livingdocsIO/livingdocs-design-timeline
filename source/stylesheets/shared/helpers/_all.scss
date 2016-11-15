@@ -1,3 +1,10 @@
+// vertical rhythm
+
+body * + * {
+  margin-top: 1.5em;
+}
+
+
 // Size Modifieres
 .full-width {
   margin-left: -50%;

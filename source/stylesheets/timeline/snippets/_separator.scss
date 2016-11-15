@@ -1,8 +1,9 @@
 hr.separator {
-  @include rhythm(1, 2);
   border: none;
   height: 1px;
   clear: both;
+  padding-top: 3.25em;
+  padding-bottom: 3.25em;
 
   &:before {
     content: '';
