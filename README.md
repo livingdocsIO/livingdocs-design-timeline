@@ -1,10 +1,11 @@
+# Timeline Design
 
-#Timeline Design
+This design is used as a default design by our free service Livingdocs Beta (https://beta.livingdocs.io)
+Feel free to use it as a boilerplate for your own designs.
 
-For an introduction on how to create and work with livingdocs designs please visit [livingdocs design boilerplate](https://github.com/upfrontIO/livingdocs-design-boilerplate).
+For an introduction on how to create and work with Livingdocs designs please visit [our documentation](https://github.com/upfrontIO/livingdocs/blob/master/public/design/create_designs.md).
 
-
-# Publish a design
+## Tasks
 
 ```bash
 # update the version
@@ -13,10 +14,3 @@ grunt prepare-design-publish:patch
 # build and publish the design with ldm
 npm run publish-design
 ```
-
-
-## Copyright
-
-Copyright (c) 2014 upfront GmbH, all rights reserved
-
-It is not permitted to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this Software ('livingdocs-design-timeline'), except when explicitly stated otherwise by upfront GmbH.
