@@ -9,7 +9,7 @@ grunt.initConfig
     dist:
       options:
         style: 'expanded'
-        require: ['susy', 'breakpoint']
+        require: ['susy']
       files: [
         expand: true
         cwd: './source'
