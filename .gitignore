@@ -1,8 +1,4 @@
 node_modules
 dist
-bower_components
 .DS_Store
-.tmp/
-.idea/*
-.sass-cache
 npm-debug.log
