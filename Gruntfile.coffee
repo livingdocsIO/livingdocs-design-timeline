@@ -9,7 +9,7 @@ grunt.initConfig
     dist:
       options:
         style: 'expanded'
-        require: ['susy']
+#        require: ['susy']
       files: [
         expand: true
         cwd: './source'
@@ -27,7 +27,7 @@ grunt.initConfig
         expand: true
         cwd: './source'
         src: ['./']
-        dest: '.tmp/'
+        dest: '.dist/'
       ]
     build:
       options:
@@ -40,7 +40,7 @@ grunt.initConfig
         expand: true
         cwd: './source'
         src: ['./']
-        dest: '.tmp/'
+        dest: 'dist/'
       ]
 
   copy:
