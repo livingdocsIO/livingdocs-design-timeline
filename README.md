@@ -14,3 +14,9 @@ grunt prepare-design-publish:patch
 # build and publish the design with ldm
 npm run publish-design
 ```
+
+
+## Screenshots
+
+### Article
+![Article screenshot](article.jpg)
