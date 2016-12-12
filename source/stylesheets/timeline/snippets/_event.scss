@@ -15,7 +15,7 @@
     position: absolute;
     left: - $time-length;
     @include breakpoint($medium-screens-or-smaller) {
-      left: - $timeline-width / 2;
+      display: none;
     }
     top: .75em;
   }
