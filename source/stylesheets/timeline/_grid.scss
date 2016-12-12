@@ -21,5 +21,8 @@ body {
 }
 
 .layout {
-  @include container(6/4 * $text-width);
+  @include container;
+  @include breakpoint($large-screen) {
+    @include container(6/4 * $text-width);
+  }
 }
