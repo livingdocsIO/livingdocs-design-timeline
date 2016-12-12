@@ -5,12 +5,20 @@ Feel free to use it as a boilerplate for your own designs.
 
 For an introduction on how to create and work with Livingdocs designs please visit [our documentation](https://github.com/upfrontIO/livingdocs/blob/master/public/design/create_designs.md).
 
-## Tasks
+## Getting started
 
+### Running a local development server
 ```bash
-# update the version
-grunt prepare-design-publish:patch
-
-# build and publish the design with ldm
-npm run publish-design
+npm start
 ```
+
+### Creating a build
+```bash
+npm run build
+```
+
+
+## Screenshots
+
+### Article
+![Article screenshot](article.jpg)

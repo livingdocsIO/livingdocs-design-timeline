@@ -3,37 +3,28 @@
   "version": "1.1.0",
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
   "scripts": {
-    "start": "grunt server",
-    "publish-design": "grunt build-design && ldm design:publish dist"
-  },
-  "dependencies": {
-    "@livingdocs/framework": "^6.2.0",
-    "coffee-script": "^1.7.1",
-    "color": "^0.6.0",
-    "express": "^4.1.1",
-    "grunt-livingdocs-design": "^0.1.1",
-    "livingdocs-manager": "^4.1.0",
-    "jquery": "github:upfrontio/jquery#iframe-script-eval-2.1.3",
-    "upfront-editable": "github:upfrontio/editable.js#v0.6.0",
-    "susy": "2.2.0",
-    "breakpoint-sass": "2.6.1"
+    "build": "OPTIMIZE=true webpack --display-error-details",
+    "start": "webpack-dev-server --hot --host 0.0.0.0"
   },
   "devDependencies": {
-    "cheerio": "^0.12.4",
-    "grunt": "^0.4.2",
-    "grunt-autoprefixer": "^0.6.5",
-    "grunt-bump": "^0.1.0",
-    "grunt-contrib-clean": "^0.4.1",
-    "grunt-contrib-compass": "^1.0.1",
-    "grunt-contrib-copy": "^0.4.1",
-    "grunt-contrib-jade": "^0.13.0",
-    "grunt-contrib-sass": "^0.7.2",
-    "grunt-contrib-stylus": "^0.20.0",
-    "grunt-contrib-watch": "^0.4.4",
-    "grunt-express": "^1.2.1",
-    "grunt-recess": "^0.3.3",
+    "clean-webpack-plugin": "^0.1.14",
+    "color": "^0.6.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.26.0",
+    "express": "^4.1.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "html-minifier": "^0.5.6",
-    "load-grunt-tasks": "^0.4.0",
-    "pretty-data": "^0.40.0"
+    "html-webpack-plugin": "^2.24.1",
+    "livingdocs-manager": "^4.1.0",
+    "node-sass": "^3.4.2",
+    "openpack": "^1.0.0",
+    "postcss-loader": "^1.1.1",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "susy": "2.2.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }
