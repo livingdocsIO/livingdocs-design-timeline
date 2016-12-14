@@ -1,9 +1,13 @@
 @mixin image-container {
   .image-container {
     background-position: center center;
-    background-attachment: fixed;
     background-size: cover;
     height: inherit;
+
+    @include breakpoint($large-screen) {
+      background-attachment: fixed;
+    }
+
   }
 }
 
