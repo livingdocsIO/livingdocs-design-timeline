@@ -4,7 +4,7 @@
   "license": "Copyright (c) 2014 upfront GmbH, all rights reserved",
   "scripts": {
     "build": "OPTIMIZE=true webpack --display-error-details",
-    "start": "webpack-dev-server --hot --host 0.0.0.0"
+    "start": "webpack-dev-server --host 0.0.0.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.14",

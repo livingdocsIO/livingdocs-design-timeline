@@ -69,6 +69,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin([distPath]),
     new BuildDesignPlugin({
       src: path.resolve('./source'),
