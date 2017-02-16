@@ -14,7 +14,8 @@ module.exports = {
   context: __dirname,
   devtool: 'source-map',
   entry: {
-    timeline: './source/stylesheets/timeline.scss'
+    timeline: './source/stylesheets/timeline.scss',
+    foo: './source/components'
   },
   output: {
     path: distPath,
@@ -25,6 +26,9 @@ module.exports = {
       {
         test: /\.(png|jpe?g|svg|gif)$/,
         loader: 'url-loader'
+      },{
+        test: /\.html$/,
+        loader: 'html-loader'
       },
       {
         test: /timeline\.scss$/,

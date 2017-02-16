@@ -88,12 +88,5 @@ module.exports = {
     ),
     new webpack.optimize.OccurrenceOrderPlugin(true),
     new webpack.optimize.UglifyJsPlugin({sourceMap: true, warnings: true, minimize: true})
-  ],
-  devServer: {
-    outputPath: distPath,
-    historyApiFallback: true,
-    inline: true,
-    contentBase: distPath,
-    port: 3333
-  }
+  ]
 }
