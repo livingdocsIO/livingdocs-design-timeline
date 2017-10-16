@@ -30,6 +30,9 @@ module.exports = {
         test: /timeline\.scss$/,
         use: [
           {
+            loader: 'style-loader'
+          },
+          {
             loader: 'css-loader'
           },
           {
