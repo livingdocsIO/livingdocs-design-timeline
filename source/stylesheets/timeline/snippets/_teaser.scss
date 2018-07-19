@@ -32,7 +32,7 @@
   @include breakpoint($large-screen) {
     @include squish(1);
     // reset stupid responsive styles
-    // https://github.com/upfrontIO/livingdocs-design-timeline/issues/7
+    // https://github.com/livingdocsIO/livingdocs-design-timeline/issues/7
     h1, h2, h3, h4 {
       margin-left: 0;
     }
