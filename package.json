@@ -17,7 +17,7 @@
     "html-webpack-plugin": "^2.24.1",
     "livingdocs-manager": "^4.1.0",
     "node-sass": "^3.4.2",
-    "openpack": "^1.0.0",
+    "openpack": "1.0.0",
     "postcss-loader": "^1.1.1",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.2",
